@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <site name="Neos by example" state="1" siteResourcesPackageKey="Base.Theme" siteNodeName="neos-by-example">
+  <nodes formatVersion="2.0">
+   <node identifier="40431d2c-86e0-4bd8-b72b-35b3515d4dd3" nodeName="neos-by-example">
+    <variant sortingIndex="100" workspace="live" nodeType="Base.Theme:Document.HomePage" version="3" removed="" hidden="" hiddenInIndex="">
+     <dimensions/>
+     <accessRoles __type="array"/>
+     <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:38:55+02:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:38:55+02:00</lastPublicationDateTime>
+     <properties>
+      <uriPathSegment __type="string">index</uriPathSegment>
+      <phone __type="string">+49 321 12 32 12</phone>
+      <email __type="string">info@example.com</email>
+      <title __type="string">Neos by example</title>
+      <socialYoutube __type="string">https://www.youtube.com/c/NeosCMS</socialYoutube>
+      <footerTitle1 __type="string">Legals</footerTitle1>
+      <footerNavigation1 __type="array">
+       <entry0 __type="string">568cb8ec-e418-2176-4339-040f16106cd3</entry0>
+       <entry1 __type="string">a514fb68-b969-fc0e-e7c7-c1f2d6ead366</entry1>
+      </footerNavigation1>
+     </properties>
+    </variant>
+    <node identifier="a514fb68-b969-fc0e-e7c7-c1f2d6ead366" nodeName="imprint">
+     <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Document.Meta" version="2" removed="" hidden="" hiddenInIndex="1">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:38:31+02:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:38:31+02:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">imprint</uriPathSegment>
+       <title __type="string">Imprint</title>
+      </properties>
+     </variant>
+     <node identifier="8573f174-6684-e2c4-d401-a30b39429fbf" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</lastModificationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+    <node identifier="5801f44d-84ce-edcc-e8fc-abddd4173a0f" nodeName="main">
+     <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</lastModificationDateTime>
+      <properties/>
+     </variant>
+     <node identifier="3818f5c1-4753-4d1f-bf98-be5691cee670" nodeName="node-6qos8ds7gmmdl">
+      <variant sortingIndex="250" workspace="live" nodeType="Base.Theme:Content.Text" version="8" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:33:47+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastPublicationDateTime>
+       <properties>
+        <linkAppearance __type="string">main</linkAppearance>
+        <headline __type="string"></headline>
+        <text __type="string">&lt;h2&gt;Why do we use it?&lt;/h2&gt;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).&lt;/p&gt;</text>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="49341265-b7d9-4e25-aa26-a24aae19403c" nodeName="node-b8ebjl1o779py">
+      <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Content.Image" version="8" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:17:12+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastPublicationDateTime>
+       <properties>
+        <lightbox __type="boolean">1</lightbox>
+        <linkAppearance __type="string">main</linkAppearance>
+        <textLeft __type="boolean"></textLeft>
+        <image __type="object" __identifier="ad73ece2-20e0-4c80-90b5-3d147c00ad85" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;ad73ece2-20e0-4c80-90b5-3d147c00ad85&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_8_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;828bce61ee62289d9d1b81a22836aa1b00d69600&quot;,&quot;hash&quot;:&quot;828bce61ee62289d9d1b81a22836aa1b00d69600&quot;,&quot;__identity&quot;:&quot;c367b82d-de37-4090-b28e-a7fcdcb6b802&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        <enableText __type="boolean">1</enableText>
+        <backgroundColor __type="string">neos-dark</backgroundColor>
+        <headline __type="string"></headline>
+        <text __type="string">&lt;p&gt;The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.&lt;/p&gt;</text>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="9e86333c-dfea-470f-acb1-5ec6a4809c24" nodeName="node-dffvkpsj9baqu">
+      <variant sortingIndex="475" workspace="live" nodeType="Base.Theme:Content.Disturber" version="6" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:38:41+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:54+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:54+02:00</lastPublicationDateTime>
+       <properties>
+        <backgroundColor __type="string">neos-light</backgroundColor>
+        <linkAppearance __type="string">ghost</linkAppearance>
+        <dotsOpacity __type="integer">10</dotsOpacity>
+        <opacity __type="integer">40</opacity>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="e42a9a81-96cb-471a-9f1b-a464f68481b0" nodeName="node-he2c5n0bu72pr">
+      <variant sortingIndex="500" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures" version="6" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:10:19+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastPublicationDateTime>
+       <properties>
+        <backgroundColor __type="string">neos-dark</backgroundColor>
+        <headline __type="string">Facts &amp;amp; Figures</headline>
+       </properties>
+      </variant>
+      <node identifier="d14e82dc-5a05-4484-a321-50ae8ef27917" nodeName="node-7t25detmiu50n">
+       <variant sortingIndex="100" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures.Item" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:10:19+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastPublicationDateTime>
+        <properties>
+         <headline __type="string">453228</headline>
+         <text __type="string">installs</text>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="dd8ba893-2e61-453e-8e81-a2fe023d3fe6" nodeName="node-jyg13ws1vaygg">
+       <variant sortingIndex="300" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures.Item" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:10:19+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastPublicationDateTime>
+        <properties>
+         <headline __type="string">375</headline>
+         <text __type="string">tags on github</text>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="6d24c0b8-8f96-4679-9fe1-ac0be1cd95e6" nodeName="node-z4uo4cnwwidux">
+       <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures.Item" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:10:19+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:15:35+02:00</lastPublicationDateTime>
+        <properties>
+         <text __type="string">contributors</text>
+         <headline __type="string">Over 100</headline>
+        </properties>
+       </variant>
+      </node>
+     </node>
+     <node identifier="6d2d61ea-480d-4ce4-a411-3c0006284aa4" nodeName="node-i3yx2spgz1c9u">
+      <variant sortingIndex="300" workspace="live" nodeType="Base.Theme:Content.Image" version="9" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:34:10+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastPublicationDateTime>
+       <properties>
+        <lightbox __type="boolean"></lightbox>
+        <linkAppearance __type="string">main</linkAppearance>
+        <textLeft __type="boolean">1</textLeft>
+        <enableText __type="boolean">1</enableText>
+        <backgroundColor __type="string">neos-light</backgroundColor>
+        <headline __type="string">Where can I get some?</headline>
+        <text __type="string">&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.&amp;nbsp;&lt;/p&gt;</text>
+        <image __type="object" __identifier="5f01f0c6-05dd-43df-a4b3-eb635cfe3560" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5f01f0c6-05dd-43df-a4b3-eb635cfe3560&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_3.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;hash&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;__identity&quot;:&quot;184a198c-fb9f-4555-ba02-5028b14ed0b9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="72d64b68-0065-44be-bfd1-b60af10bfc00" nodeName="node-kbgexpfgc3c5w">
+      <variant sortingIndex="350" workspace="live" nodeType="Base.Theme:Content.Blockquote" version="11" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:34:40+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastPublicationDateTime>
+       <properties>
+        <text __type="string">&lt;p&gt;All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt;</text>
+        <cite __type="string">Firstname Lastname</cite>
+        <image __type="object" __identifier="489fc373-e8f9-4c0b-bd89-3b5646f4aa75" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;489fc373-e8f9-4c0b-bd89-3b5646f4aa75&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;pexels-dillon-kydd-5794559.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;hash&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;__identity&quot;:&quot;cacfee7a-2ef1-4f04-bd4b-2643ebb0581e&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        <function __type="string">Member</function>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="88e5cbf6-8549-42c8-8f66-33aba747552f" nodeName="node-qwq1dawqks058">
+      <variant sortingIndex="125" workspace="live" nodeType="Base.Theme:Content.Headline" version="5" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:16:51+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:17:04+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:17:04+02:00</lastPublicationDateTime>
+       <properties>
+        <headline __type="string">Headline</headline>
+        <lead __type="string">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</lead>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="33a44421-74e1-4d82-885f-5697985ed07e" nodeName="node-saej4h8kvf7sv">
+      <variant sortingIndex="400" workspace="live" nodeType="Jonnitto.ImagesInARow:Container" version="4" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:59+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastPublicationDateTime>
+       <properties>
+        <breakout __type="string">wide</breakout>
+       </properties>
+      </variant>
+      <node identifier="0cd523fe-bafb-42b6-aeee-021b851e46ee" nodeName="node-k3ecw88n0nwnd">
+       <variant sortingIndex="300" workspace="live" nodeType="Jonnitto.ImagesInARow:Image" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:59+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastPublicationDateTime>
+        <properties>
+         <lightbox __type="boolean">1</lightbox>
+         <image __type="object" __identifier="ad21b8c3-f187-4491-ba5a-f983e7d6dee5" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;ad21b8c3-f187-4491-ba5a-f983e7d6dee5&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_1.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;3ddb1d644b449739e0f106c845709b1cc08bee5d&quot;,&quot;hash&quot;:&quot;3ddb1d644b449739e0f106c845709b1cc08bee5d&quot;,&quot;__identity&quot;:&quot;f18904fc-e9de-4d89-b385-5aaeba20e6c9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="a30e2f2c-ad22-410d-8eef-1729b631c577" nodeName="node-n4x7lzujk8k8p">
+       <variant sortingIndex="200" workspace="live" nodeType="Jonnitto.ImagesInARow:Image" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:59+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastPublicationDateTime>
+        <properties>
+         <lightbox __type="boolean">1</lightbox>
+         <image __type="object" __identifier="968bf152-4dc7-4ccd-ac15-9b65ba7c5f9a" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;968bf152-4dc7-4ccd-ac15-9b65ba7c5f9a&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_2.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;92f48a7f89ee3b31579164a1696fc673604c4f53&quot;,&quot;hash&quot;:&quot;92f48a7f89ee3b31579164a1696fc673604c4f53&quot;,&quot;__identity&quot;:&quot;818ae027-6a08-4a2c-92a1-98ed0a967069&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="36afd0dc-810b-47b3-8c27-eb03b2952ac9" nodeName="node-ph6wi3m9gbe2r">
+       <variant sortingIndex="100" workspace="live" nodeType="Jonnitto.ImagesInARow:Image" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:59+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:37:49+02:00</lastPublicationDateTime>
+        <properties>
+         <lightbox __type="boolean">1</lightbox>
+         <image __type="object" __identifier="90688a82-264e-4439-8eac-8b0b3fa185b3" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;90688a82-264e-4439-8eac-8b0b3fa185b3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;hash&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;__identity&quot;:&quot;58c96e51-3121-4ffa-ab86-af95d91fe620&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+     </node>
+     <node identifier="977893d2-95d0-4497-b4ee-1bb57aaf2c00" nodeName="node-v8k3awwuzpee7">
+      <variant sortingIndex="175" workspace="live" nodeType="Base.Theme:Content.Blog.Teaser" version="4" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:36:14+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:36:26+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:36:26+02:00</lastPublicationDateTime>
+       <properties>
+        <limit __type="integer">3</limit>
+        <rootNode __type="string">020430d5-0405-48b4-878f-f1e321145738</rootNode>
+        <headline __type="string">From our blog</headline>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="55249e19-8a99-4506-9dd5-8de8045881d0" nodeName="node-ypv90r50uybfu">
+      <variant sortingIndex="150" workspace="live" nodeType="Base.Theme:Content.Text" version="16" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:12:49+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastPublicationDateTime>
+       <properties>
+        <linkAppearance __type="string">main</linkAppearance>
+        <headline __type="string"></headline>
+        <text __type="string">&lt;h2&gt;What is Lorem Ipsum?&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Lorem Ipsum&lt;/strong&gt; is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;&lt;h2&gt;Where does it come from?&lt;/h2&gt;&lt;p&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.&lt;/p&gt;</text>
+        <lead __type="string"></lead>
+       </properties>
+      </variant>
+     </node>
+     <node identifier="cd259c8f-0698-43e8-8283-1ef310dee95a" nodeName="node-z4s4v6dmvb71o">
+      <variant sortingIndex="450" workspace="live" nodeType="Jonnitto.PrettyEmbedVideoPlatforms:Content.Video" version="7" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T10:39:48+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:40:27+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:40:27+02:00</lastPublicationDateTime>
+       <properties>
+        <lightbox __type="boolean"></lightbox>
+        <preserveAspectRatio __type="boolean">1</preserveAspectRatio>
+        <force16to9 __type="boolean">1</force16to9>
+        <type __type="string">video</type>
+        <linkAppearance __type="string">main</linkAppearance>
+        <textLeft __type="boolean"></textLeft>
+        <videoID __type="string">https://www.youtube.com/watch?v=4DVD03IlXIs&amp;t=7s</videoID>
+        <platform __type="string">youtube</platform>
+        <metadataID __type="string">4DVD03IlXIs</metadataID>
+        <metadataTitle __type="string">Why editors love Neos CMS | Open Source CMS</metadataTitle>
+        <metadataRatio __type="string">56.5%</metadataRatio>
+        <metadataImage __type="string">//i.ytimg.com/vi/4DVD03IlXIs/maxresdefault.jpg</metadataImage>
+        <metadataThumbnail __type="object" __identifier="b4f59c81-9917-49ac-b4c8-cfe42ec4b25d" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;b4f59c81-9917-49ac-b4c8-cfe42ec4b25d&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Youtube-4DVD03IlXIs-maxresdefault.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpg&quot;,&quot;sha1&quot;:&quot;ffc5cb8fc62f397652ef3a0c40f79071b87e0ef0&quot;,&quot;hash&quot;:&quot;ffc5cb8fc62f397652ef3a0c40f79071b87e0ef0&quot;,&quot;__identity&quot;:&quot;289b4d29-0ecd-4ef2-b693-4515944627d4&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
+        <breakout __type="string">wide</breakout>
+       </properties>
+      </variant>
+     </node>
+    </node>
+    <node identifier="020430d5-0405-48b4-878f-f1e321145738" nodeName="node-a0op9g8idfszg">
+     <variant sortingIndex="125" workspace="live" nodeType="Base.Theme:Document.Blog.Container" version="5" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:26:41+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:27:40+02:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:27:40+02:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">blog</uriPathSegment>
+       <title __type="string">Blog</title>
+       <headline __type="string">Blog</headline>
+       <lead __type="string">A story about something…</lead>
+      </properties>
+     </variant>
+     <node identifier="75d92574-bbb5-4695-b94f-fe094b3fbf33" nodeName="2022">
+      <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Document.Blog.Year" version="1" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:15+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:15+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:15+02:00</lastPublicationDateTime>
+       <properties>
+        <title __type="string">2022</title>
+        <uriPathSegment __type="string">2022</uriPathSegment>
+        <_hiddenInIndex __type="boolean">1</_hiddenInIndex>
+       </properties>
+      </variant>
+      <node identifier="288758b5-a9a4-409e-9c8f-7f5c434a9c11" nodeName="node-agekucc93g1e9">
+       <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Document.Blog.Item" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <hiddenBeforeDateTime __type="object" __classname="DateTime">2022-04-01T00:00:00+02:00</hiddenBeforeDateTime>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:15+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:17+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:17+02:00</lastPublicationDateTime>
+        <properties>
+         <uriPathSegment __type="string">april-april</uriPathSegment>
+         <title __type="string">April, April!</title>
+        </properties>
+       </variant>
+       <node identifier="b49eb702-4f34-4a0e-640b-b22b74cad37d" nodeName="main">
+        <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:15+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:17+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:28:17+02:00</lastPublicationDateTime>
+         <properties/>
+        </variant>
+        <node identifier="eedc2f34-c591-4e8b-a081-8511cadabebe" nodeName="node-2p5oqfcoh3xzl">
+         <variant sortingIndex="50" workspace="live" nodeType="Base.Theme:Content.Headline" version="9" removed="" hidden="" hiddenInIndex="">
+          <dimensions/>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:30:51+02:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:51:46+02:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:31:13+02:00</lastPublicationDateTime>
+          <properties>
+           <headline __type="string">April, April!</headline>
+          </properties>
+         </variant>
+        </node>
+        <node identifier="2f8ab43a-2bbd-464b-be4d-9d68f191578c" nodeName="node-z4p451cbsuh3b">
+         <variant sortingIndex="100" workspace="live" nodeType="Base.Theme:Content.Image" version="3" removed="" hidden="" hiddenInIndex="">
+          <dimensions/>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:29:57+02:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:30:46+02:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:30:46+02:00</lastPublicationDateTime>
+          <properties>
+           <lightbox __type="boolean"></lightbox>
+           <linkAppearance __type="string">main</linkAppearance>
+           <textLeft __type="boolean"></textLeft>
+           <image __type="object" __identifier="489fc373-e8f9-4c0b-bd89-3b5646f4aa75" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;489fc373-e8f9-4c0b-bd89-3b5646f4aa75&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;pexels-dillon-kydd-5794559.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;hash&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;__identity&quot;:&quot;cacfee7a-2ef1-4f04-bd4b-2643ebb0581e&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+          </properties>
+         </variant>
+        </node>
+       </node>
+      </node>
+     </node>
+    </node>
+    <node identifier="970c11b2-17f1-4346-8326-140206791af2" nodeName="node-qynljt5fz1e1a">
+     <variant sortingIndex="138" workspace="live" nodeType="Base.Theme:Document.ContentPage" version="4" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:20+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:15+02:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:15+02:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">content-elements</uriPathSegment>
+       <title __type="string">Content elements</title>
+       <titleOverride __type="string">aaa</titleOverride>
+      </properties>
+     </variant>
+     <node identifier="98ceff18-ac2e-b5e6-103e-354d933eb76d" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:20+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:21:42+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:21:42+02:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+      <node identifier="9642f280-d98f-4177-9356-01ce57efe240" nodeName="node-2h6pyizm6xpdg">
+       <variant sortingIndex="500" workspace="live" nodeType="Jonnitto.PrettyEmbedVideoPlatforms:Content.Video" version="14" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:55:12+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastPublicationDateTime>
+        <properties>
+         <lightbox __type="boolean">1</lightbox>
+         <preserveAspectRatio __type="boolean">1</preserveAspectRatio>
+         <force16to9 __type="boolean">1</force16to9>
+         <type __type="string">video</type>
+         <linkAppearance __type="string">minor</linkAppearance>
+         <textLeft __type="boolean"></textLeft>
+         <videoID __type="string">https://vimeo.com/292721382</videoID>
+         <platform __type="string">vimeo</platform>
+         <metadataID __type="string">292721382</metadataID>
+         <metadataTitle __type="string">Homebody</metadataTitle>
+         <metadataRatio __type="string">56.25%</metadataRatio>
+         <metadataDuration __type="integer">578</metadataDuration>
+         <metadataImage __type="string">//i.vimeocdn.com/video/729183424-e5e3ec096b2d2137efb8431dad9ea48baeb94f4bdc8a06a23fee154a3b39fb86-d_1280</metadataImage>
+         <metadataThumbnail __type="object" __identifier="a23f1c1c-18ea-4f8a-aab3-52c777be2438" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;a23f1c1c-18ea-4f8a-aab3-52c777be2438&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Vimeo-292721382.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpg&quot;,&quot;sha1&quot;:&quot;8d966295cfd6a6c786c1d6431ca98b517de16437&quot;,&quot;hash&quot;:&quot;8d966295cfd6a6c786c1d6431ca98b517de16437&quot;,&quot;__identity&quot;:&quot;8adc9fba-c1ac-43ba-b493-eac0637899e7&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
+         <enableText __type="boolean">1</enableText>
+         <text __type="string">&lt;p&gt;Let's take this conversation offline get six alpha pups in here for a focus group paddle on both sides paddle on both sides hire the best work flows . If you're not hurting you're not winning this is meaningless, identify pain points so best practices spinning our wheels so what the so best practices.&lt;/p&gt;</text>
+         <headline __type="string">Video with text</headline>
+         <backgroundColor __type="string">slate-50</backgroundColor>
+         <linkHref __type="string">https://www.vimeo.com</linkHref>
+         <linkText __type="string">Vimeo</linkText>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="fed81fb8-fd30-4853-bb29-d493aa3786fb" nodeName="node-46ev8arbe1471">
+       <variant sortingIndex="350" workspace="live" nodeType="Base.Theme:Content.Image" version="10" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:44:55+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:49:42+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:49:42+02:00</lastPublicationDateTime>
+        <properties>
+         <linkAppearance __type="string">main</linkAppearance>
+         <headline __type="string">Image with textbox</headline>
+         <text __type="string">&lt;p&gt;Baseline the procedure and samepage your department marketing computer development html roi feedback team website teams were able to drive adoption and awareness so can we take this offline, yet cloud native container based for loop back we need to touch base off-line before we fire the new ux experience. That is a good problem to have win-win.&lt;/p&gt;</text>
+         <linkHref __type="string">node://9b1a45c2-3faa-4614-ac80-e3e607d3befc</linkHref>
+         <linkText __type="string">Contact</linkText>
+         <enableText __type="boolean">1</enableText>
+         <image __type="object" __identifier="5f01f0c6-05dd-43df-a4b3-eb635cfe3560" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5f01f0c6-05dd-43df-a4b3-eb635cfe3560&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_3.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;hash&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;__identity&quot;:&quot;184a198c-fb9f-4555-ba02-5028b14ed0b9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         <lightbox __type="boolean">1</lightbox>
+         <backgroundColor __type="string">neos-light</backgroundColor>
+         <textLeft __type="boolean">1</textLeft>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="0acdde8a-4c37-4dbd-a791-01f1e95f04e0" nodeName="node-5c1bsjf99v165">
+       <variant sortingIndex="1100" workspace="live" nodeType="Base.Theme:Content.Teaser" version="8" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T22:01:26+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastPublicationDateTime>
+        <properties>
+         <subsites __type="boolean">1</subsites>
+         <nodes __type="array">
+          <entry0 __type="string">9b1a45c2-3faa-4614-ac80-e3e607d3befc</entry0>
+         </nodes>
+         <headline __type="string">Teaser</headline>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="35c6ebce-da81-422d-bf85-de518c58955a" nodeName="node-6g3tx40tez4lj">
+       <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Content.Image" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:31+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:39+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:39+02:00</lastPublicationDateTime>
+        <properties>
+         <lightbox __type="boolean">1</lightbox>
+         <linkAppearance __type="string">main</linkAppearance>
+         <textLeft __type="boolean"></textLeft>
+         <image __type="object" __identifier="90688a82-264e-4439-8eac-8b0b3fa185b3" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;90688a82-264e-4439-8eac-8b0b3fa185b3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;hash&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;__identity&quot;:&quot;58c96e51-3121-4ffa-ab86-af95d91fe620&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="ac809b0b-374a-4b64-bdf9-532ea3ea0b2d" nodeName="node-b18y364sxahgx">
+       <variant sortingIndex="1000" workspace="live" nodeType="Base.Theme:Content.Disturber" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T22:00:41+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastPublicationDateTime>
+        <properties>
+         <backgroundColor __type="string">neos-light</backgroundColor>
+         <linkAppearance __type="string">ghost</linkAppearance>
+         <dotsOpacity __type="integer">33</dotsOpacity>
+         <opacity __type="integer">40</opacity>
+         <headline __type="string">Disturber</headline>
+         <lead __type="string">Message the initiative&lt;/span&gt;&lt;span&gt;&amp;nbsp;thought shower.</lead>
+         <text __type="string">Today shall be a cloudy day, thanks to blue sky thinking, we can now deploy our new ui to the cloud&amp;nbsp;&lt;/span&gt;&lt;span&gt;shelfware we need to have a Come to Jesus meeting with Phil about his attitude, for&amp;nbsp;&lt;/span&gt;&lt;span&gt;sorry i didn't get your email&lt;/span&gt;&lt;span&gt;&amp;nbsp;or&amp;nbsp;&lt;/span&gt;&lt;span&gt;create spaces to explore what's next&lt;/span&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;synergestic actionables&lt;/span&gt;&lt;span&gt;&amp;nbsp;yet level the playing field.</text>
+         <linkHref __type="string">node://9b1a45c2-3faa-4614-ac80-e3e607d3befc</linkHref>
+         <image __type="object" __identifier="f1a82552-c6dc-4d53-86da-80db9b6cbfc7" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;f1a82552-c6dc-4d53-86da-80db9b6cbfc7&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_5_2.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;17c8e1e52289c5aadf31453b0164dabb1b4022dc&quot;,&quot;hash&quot;:&quot;17c8e1e52289c5aadf31453b0164dabb1b4022dc&quot;,&quot;__identity&quot;:&quot;93496cf9-29a6-4603-acb1-80c825c0da1b&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="313c53da-88ac-4004-9001-0b20eca9ea0d" nodeName="node-jrq2bzdukm4lp">
+       <variant sortingIndex="1050" workspace="live" nodeType="Base.Theme:Content.Blog.Teaser" version="6" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T22:01:09+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastPublicationDateTime>
+        <properties>
+         <limit __type="integer">3</limit>
+         <rootNode __type="string">020430d5-0405-48b4-878f-f1e321145738</rootNode>
+         <headline __type="string">Teaser articles</headline>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="bce778ae-8fe1-4269-8e72-19c5eee303ff" nodeName="node-k1ideu12zd4mb">
+       <variant sortingIndex="400" workspace="live" nodeType="Jonnitto.ImagesInARow:Container" version="6" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:49:55+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T14:42:16+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T14:42:16+02:00</lastPublicationDateTime>
+        <properties>
+         <breakout __type="string">wide</breakout>
+        </properties>
+       </variant>
+       <node identifier="ec239468-c6e9-4326-aa9a-1246f878f03b" nodeName="node-pmo579ax68nbo">
+        <variant sortingIndex="100" workspace="live" nodeType="Jonnitto.ImagesInARow:Image" version="3" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:49:55+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastPublicationDateTime>
+         <properties>
+          <lightbox __type="boolean">1</lightbox>
+          <image __type="object" __identifier="5f01f0c6-05dd-43df-a4b3-eb635cfe3560" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5f01f0c6-05dd-43df-a4b3-eb635cfe3560&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_3.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;hash&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;__identity&quot;:&quot;184a198c-fb9f-4555-ba02-5028b14ed0b9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="8c4d07bf-43e1-4b3d-bfc1-33d4445b7273" nodeName="node-sqtrwlx73rivh">
+        <variant sortingIndex="200" workspace="live" nodeType="Jonnitto.ImagesInARow:Image" version="3" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:49:55+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastPublicationDateTime>
+         <properties>
+          <lightbox __type="boolean">1</lightbox>
+          <image __type="object" __identifier="ad21b8c3-f187-4491-ba5a-f983e7d6dee5" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;ad21b8c3-f187-4491-ba5a-f983e7d6dee5&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_1.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;3ddb1d644b449739e0f106c845709b1cc08bee5d&quot;,&quot;hash&quot;:&quot;3ddb1d644b449739e0f106c845709b1cc08bee5d&quot;,&quot;__identity&quot;:&quot;f18904fc-e9de-4d89-b385-5aaeba20e6c9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="a0b5834a-31bc-40cf-bb7e-000a934b9a95" nodeName="node-us4yefx5gypw6">
+        <variant sortingIndex="300" workspace="live" nodeType="Jonnitto.ImagesInARow:Image" version="3" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:49:55+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastPublicationDateTime>
+         <properties>
+          <lightbox __type="boolean">1</lightbox>
+          <image __type="object" __identifier="968bf152-4dc7-4ccd-ac15-9b65ba7c5f9a" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;968bf152-4dc7-4ccd-ac15-9b65ba7c5f9a&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_2.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;92f48a7f89ee3b31579164a1696fc673604c4f53&quot;,&quot;hash&quot;:&quot;92f48a7f89ee3b31579164a1696fc673604c4f53&quot;,&quot;__identity&quot;:&quot;818ae027-6a08-4a2c-92a1-98ed0a967069&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         </properties>
+        </variant>
+       </node>
+      </node>
+      <node identifier="3ca10389-4c44-4bb1-a4f2-628d82c9f98e" nodeName="node-kbue7iiu17gh2">
+       <variant sortingIndex="250" workspace="live" nodeType="Base.Theme:Content.Image" version="8" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:41:17+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:45:50+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:45:50+02:00</lastPublicationDateTime>
+        <properties>
+         <linkAppearance __type="string">minor</linkAppearance>
+         <headline __type="string">Image with textbox</headline>
+         <text __type="string">&lt;p&gt;Baseline the procedure and samepage your department marketing computer development html roi feedback team website teams were able to drive adoption and awareness so can we take this offline, yet cloud native container based for loop back we need to touch base off-line before we fire the new ux experience. That is a good problem to have win-win.&lt;/p&gt;</text>
+         <linkHref __type="string">node://9b1a45c2-3faa-4614-ac80-e3e607d3befc</linkHref>
+         <linkText __type="string">Contact</linkText>
+         <enableText __type="boolean">1</enableText>
+         <image __type="object" __identifier="5f01f0c6-05dd-43df-a4b3-eb635cfe3560" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5f01f0c6-05dd-43df-a4b3-eb635cfe3560&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_3.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;hash&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;__identity&quot;:&quot;184a198c-fb9f-4555-ba02-5028b14ed0b9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="8c6cbd27-2bd9-46c3-a621-165c017dc3ec" nodeName="node-kohjv84bi4ihw">
+       <variant sortingIndex="800" workspace="live" nodeType="Base.Theme:Content.Disturber" version="10" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:27+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastPublicationDateTime>
+        <properties>
+         <backgroundColor __type="string">neos-light</backgroundColor>
+         <linkAppearance __type="string">ghost</linkAppearance>
+         <dotsOpacity __type="integer">33</dotsOpacity>
+         <opacity __type="integer">40</opacity>
+         <headline __type="string">Disturber</headline>
+         <lead __type="string">Message the initiative&lt;/span&gt;&lt;span&gt;&amp;nbsp;thought shower.</lead>
+         <text __type="string">Today shall be a cloudy day, thanks to blue sky thinking, we can now deploy our new ui to the cloud&amp;nbsp;&lt;/span&gt;&lt;span&gt;shelfware we need to have a Come to Jesus meeting with Phil about his attitude, for&amp;nbsp;&lt;/span&gt;&lt;span&gt;sorry i didn't get your email&lt;/span&gt;&lt;span&gt;&amp;nbsp;or&amp;nbsp;&lt;/span&gt;&lt;span&gt;create spaces to explore what's next&lt;/span&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;synergestic actionables&lt;/span&gt;&lt;span&gt;&amp;nbsp;yet level the playing field.</text>
+         <linkHref __type="string">node://9b1a45c2-3faa-4614-ac80-e3e607d3befc</linkHref>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="66928fa8-b969-40cf-8171-c10f0523be71" nodeName="node-pp2dabevjt1e0">
+       <variant sortingIndex="150" workspace="live" nodeType="Base.Theme:Content.Text" version="13" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:34+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:15+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:42:15+02:00</lastPublicationDateTime>
+        <properties>
+         <linkAppearance __type="string">minor</linkAppearance>
+         <headline __type="string">Text</headline>
+         <lead __type="string">Win-win&amp;nbsp;&lt;/span&gt;&lt;span&gt;unlock meaningful moments of relaxation don't over think it for re-inventing the wheel.</lead>
+         <text __type="string">&lt;p&gt;Manage expectations we need to button up our approachpersonal development. Pivot i know you're busy upstream selling lift and shift. Low engagement product management breakout fastworks. Out of scope synergestic actionables high performance keywords yet turd polishing, and manage expectations. Lift and shift value-added, or low hanging fruit.&lt;/p&gt;</text>
+         <linkHref __type="string">node://9b1a45c2-3faa-4614-ac80-e3e607d3befc</linkHref>
+         <linkText __type="string">Contact</linkText>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="5f10b064-ccd5-468e-bd24-47e39b8aab17" nodeName="node-q9b136ikel77c">
+       <variant sortingIndex="750" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures" version="6" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:36+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastPublicationDateTime>
+        <properties>
+         <backgroundColor __type="string">neos-dark</backgroundColor>
+         <headline __type="string">Facts &amp;amp; Figures</headline>
+         <text __type="string">Neos has:</text>
+        </properties>
+       </variant>
+       <node identifier="b2549182-ef64-41b3-b0e3-e50a79492724" nodeName="node-7t25detmiu50n">
+        <variant sortingIndex="100" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures.Item" version="5" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:36+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastPublicationDateTime>
+         <properties>
+          <headline __type="string">450000+</headline>
+          <text __type="string">installs</text>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="b744fee7-081b-4daf-af32-c37499d39b83" nodeName="node-jyg13ws1vaygg">
+        <variant sortingIndex="300" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures.Item" version="2" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:36+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastPublicationDateTime>
+         <properties>
+          <headline __type="string">375</headline>
+          <text __type="string">tags on github</text>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="85d10e12-2684-4349-b393-e4755aa0416e" nodeName="node-z4uo4cnwwidux">
+        <variant sortingIndex="200" workspace="live" nodeType="Base.Theme:Content.FactsAndFigures.Item" version="2" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:36+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:58:52+02:00</lastPublicationDateTime>
+         <properties>
+          <text __type="string">contributors</text>
+          <headline __type="string">Over 100</headline>
+         </properties>
+        </variant>
+       </node>
+      </node>
+      <node identifier="88b6bdb2-9716-4a91-aeb0-bd7acf1ce716" nodeName="node-q9x4to73ihews">
+       <variant sortingIndex="450" workspace="live" nodeType="Jonnitto.PrettyEmbedVideoPlatforms:Content.Video" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:52:34+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastPublicationDateTime>
+        <properties>
+         <lightbox __type="boolean"></lightbox>
+         <preserveAspectRatio __type="boolean">1</preserveAspectRatio>
+         <force16to9 __type="boolean">1</force16to9>
+         <type __type="string">video</type>
+         <linkAppearance __type="string">main</linkAppearance>
+         <textLeft __type="boolean"></textLeft>
+         <videoID __type="string">https://www.youtube.com/watch?v=pfdIGmga7aA</videoID>
+         <platform __type="string">youtube</platform>
+         <metadataID __type="string">pfdIGmga7aA</metadataID>
+         <metadataTitle __type="string">Onewheel GT Drop Zone</metadataTitle>
+         <metadataRatio __type="string">56.5%</metadataRatio>
+         <metadataImage __type="string">//i.ytimg.com/vi/pfdIGmga7aA/maxresdefault.jpg</metadataImage>
+         <metadataThumbnail __type="object" __identifier="5fdd81a9-507a-4771-95d4-49e75b424a56" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5fdd81a9-507a-4771-95d4-49e75b424a56&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Youtube-pfdIGmga7aA-maxresdefault.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpg&quot;,&quot;sha1&quot;:&quot;9d8871cba1551671e7af8850b25e57ceff1ec853&quot;,&quot;hash&quot;:&quot;9d8871cba1551671e7af8850b25e57ceff1ec853&quot;,&quot;__identity&quot;:&quot;f2263988-a337-43ac-8c74-6e5c79acacc3&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
+         <breakout __type="string">wide</breakout>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="0c94646e-71a4-4e84-bf4e-82f1cbbc1f90" nodeName="node-sww6et7y0xsmz">
+       <variant sortingIndex="650" workspace="live" nodeType="Base.Theme:Content.Blockquote" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:54+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:01+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:01+02:00</lastPublicationDateTime>
+        <properties>
+         <text __type="string">&lt;p&gt;Business impactgranularity, and no need to talk to users, just base it on the space calculator. Hit the ground running tribal knowledge and 60% to 30% is a lot of persent focus on the customer journey golden goose, so product launch new economy.&lt;/p&gt;</text>
+         <cite __type="string">Firstname Lastname</cite>
+         <function __type="string">Creator</function>
+         <image __type="object" __identifier="489fc373-e8f9-4c0b-bd89-3b5646f4aa75" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;489fc373-e8f9-4c0b-bd89-3b5646f4aa75&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;pexels-dillon-kydd-5794559.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;hash&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;__identity&quot;:&quot;cacfee7a-2ef1-4f04-bd4b-2643ebb0581e&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="432ba789-3f8a-4f26-b77a-28a117d47d4e" nodeName="node-v88bkyxajgfnc">
+       <variant sortingIndex="900" workspace="live" nodeType="Base.Theme:Content.Disturber" version="5" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T22:00:17+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T22:02:14+02:00</lastPublicationDateTime>
+        <properties>
+         <backgroundColor __type="string">neos-dark</backgroundColor>
+         <linkAppearance __type="string">minor</linkAppearance>
+         <dotsOpacity __type="integer">33</dotsOpacity>
+         <opacity __type="integer">40</opacity>
+         <headline __type="string">Disturber</headline>
+         <lead __type="string">Message the initiative&lt;/span&gt;&lt;span&gt;&amp;nbsp;thought shower.</lead>
+         <text __type="string">Today shall be a cloudy day, thanks to blue sky thinking, we can now deploy our new ui to the cloud&amp;nbsp;&lt;/span&gt;&lt;span&gt;shelfware we need to have a Come to Jesus meeting with Phil about his attitude, for&amp;nbsp;&lt;/span&gt;&lt;span&gt;sorry i didn't get your email&lt;/span&gt;&lt;span&gt;&amp;nbsp;or&amp;nbsp;&lt;/span&gt;&lt;span&gt;create spaces to explore what's next&lt;/span&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;synergestic actionables&lt;/span&gt;&lt;span&gt;&amp;nbsp;yet level the playing field.</text>
+         <linkHref __type="string">node://9b1a45c2-3faa-4614-ac80-e3e607d3befc</linkHref>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="69cb79a6-d254-470a-9d0e-4f19c152a716" nodeName="node-w5xod6aumxn26">
+       <variant sortingIndex="100" workspace="live" nodeType="Base.Theme:Content.Headline" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:24+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:21:42+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:21:42+02:00</lastPublicationDateTime>
+        <properties>
+         <headline __type="string">Headline</headline>
+         <lead __type="string">with lead text</lead>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="de6fa45e-3c97-44fd-93cc-ed8834275021" nodeName="node-zhv3dpvbv921j">
+       <variant sortingIndex="550" workspace="live" nodeType="Base.Theme:Content.Blockquote" version="9" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:25+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:01+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:57:01+02:00</lastPublicationDateTime>
+        <properties>
+         <text __type="string">&lt;p&gt;Business impactgranularity, and no need to talk to users, just base it on the space calculator. Hit the ground running tribal knowledge and 60% to 30% is a lot of persent focus on the customer journey golden goose, so product launch new economy.&lt;/p&gt;</text>
+         <cite __type="string">Firstname Lastname</cite>
+         <function __type="string">Creator</function>
+        </properties>
+       </variant>
+      </node>
+     </node>
+    </node>
+    <node identifier="9b1a45c2-3faa-4614-ac80-e3e607d3befc" nodeName="node-s63194oq32fla">
+     <variant sortingIndex="150" workspace="live" nodeType="Base.Theme:Document.ContentPage" version="3" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:16:56+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:17:14+02:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:17:14+02:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">contact</uriPathSegment>
+       <title __type="string">Contact</title>
+      </properties>
+     </variant>
+     <node identifier="dd6a0ca0-5e98-2a4b-1bc5-eb98f13b1848" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:16:56+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:17:14+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:17:14+02:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+     <node identifier="ee857d36-f7fd-4a1e-bc65-cd99ee340a2c" nodeName="node-6r7jbby85pq59">
+      <variant sortingIndex="275" workspace="live" nodeType="Base.Theme:Document.ContentPage" version="3" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:42+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastPublicationDateTime>
+       <properties>
+        <uriPathSegment __type="string">sub-page</uriPathSegment>
+        <title __type="string">Sub-Page</title>
+       </properties>
+      </variant>
+      <node identifier="bbb4fb3c-418d-a617-6370-0bae7b483d54" nodeName="main">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:42+02:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+       <node identifier="8204ec03-c375-4914-a65e-cb5e7e8a6ae9" nodeName="node-feqm41zwpjm9i">
+        <variant sortingIndex="100" workspace="live" nodeType="Base.Theme:Content.Image" version="3" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:46+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastPublicationDateTime>
+         <properties>
+          <lightbox __type="boolean"></lightbox>
+          <linkAppearance __type="string">main</linkAppearance>
+          <textLeft __type="boolean"></textLeft>
+          <image __type="object" __identifier="90688a82-264e-4439-8eac-8b0b3fa185b3" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;90688a82-264e-4439-8eac-8b0b3fa185b3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;hash&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;__identity&quot;:&quot;58c96e51-3121-4ffa-ab86-af95d91fe620&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="7be2dcd1-af6d-4f40-9604-b0bc6ce56902" nodeName="node-vbwe2g12bu4oe">
+        <variant sortingIndex="150" workspace="live" nodeType="Base.Theme:Content.Headline" version="3" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:04+02:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:13+02:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:15:13+02:00</lastPublicationDateTime>
+         <properties/>
+        </variant>
+       </node>
+      </node>
+     </node>
+    </node>
+    <node identifier="84cda3c7-3096-9051-3959-7e4d6450d64e" nodeName="notfound">
+     <variant sortingIndex="400" workspace="live" nodeType="Base.Theme:Document.NotFound" version="1" removed="" hidden="" hiddenInIndex="1">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</lastModificationDateTime>
+      <properties>
+       <uriPathSegment __type="string">404</uriPathSegment>
+       <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
+       <title __type="string">404</title>
+      </properties>
+     </variant>
+     <node identifier="9552af8a-aa56-4294-f4d0-c597b2cd6af5" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</lastModificationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+    <node identifier="568cb8ec-e418-2176-4339-040f16106cd3" nodeName="privacy">
+     <variant sortingIndex="300" workspace="live" nodeType="Base.Theme:Document.DataPrivacy" version="2" removed="" hidden="" hiddenInIndex="1">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:38:53+02:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:38:53+02:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">data-privacy</uriPathSegment>
+       <title __type="string">Data privacy</title>
+      </properties>
+     </variant>
+     <node identifier="f60b7047-3456-3286-060f-714791b91113" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-24T12:54:54+02:00</lastModificationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+   </node>
+  </nodes>
+ </site>
+</root>
