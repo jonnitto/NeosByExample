@@ -4,31 +4,20 @@ prototype(Base.Theme:Section.Header) < prototype(Neos.Fusion:Component) {
             homeUri = '#'
             items = Neos.Fusion:DataStructure {
                 01 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Architektur'
+                    label = 'Marginalised'
                 }
                 02 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Manufaktur'
-                    subItems = ${['Neuanlagen', 'Natursteinarbeiten', 'Wasser im Garten', 'Holzbau', 'Stahlbau', 'Bepflanzungen']}
+                    label = 'Key performance'
+                    subItems = ${['Indicators', 'Innovation', 'Future-proof', 'High performance']}
                 }
                 03 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Pflege'
-                    subItems = ${['Rasenpflege', 'Winterschnitt', 'Rabattenpflege']}
+                    label = 'Marketing'
                 }
                 04 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Ausstattungen'
-                    subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
+                    label = 'Development'
                 }
                 05 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Referenzen'
-                    // subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
-                }
-                06 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Tagebuch'
-                    // subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
-                }
-                07 = Base.Theme:Section.Header.Fixture.MenuItem {
-                    label = 'Über uns'
-                    // subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
+                    label = 'Contact'
                 }
             }
         }
