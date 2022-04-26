@@ -1,0 +1,53 @@
+prototype(Base.Theme:Atom.Icon) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            icon = 'neos'
+        }
+        propSets {
+            inline {
+                inline = true
+            }
+        }
+    }
+
+    // Make able to select the icon like this collection:icon
+    // This property override collection and icon
+    parts = null
+    parts.@process.split = ${value ? String.split(value, ':', 2) : null}
+
+    collection = 'icons'
+    icon = null
+    class = null
+    style = null
+    viewBox = null
+    inline = null
+
+    ariaHidden = 'true'
+    focusable = 'false'
+    role = 'img'
+
+    @if.hasIcon = ${(Type.isString(this.collection) && Type.isString(this.icon)) || Type.isArray(this.parts)}
+
+    renderer = afx`
+        <Neos.Fusion:Augmenter
+            {...props}
+            ariaHidden={null}
+            parts={null}
+            collection={null}
+            icon={null}
+            style={null}
+            viewBox={null}
+            inline={null}
+            aria-hidden={props.ariaHidden}
+        >
+            <Sitegeist.Stampede:Icon
+                collection={props.parts ? props.parts[0] : props.collection}
+                icon={props.parts ? props.parts[1] : props.icon}
+                class={props.class}
+                style={props.style}
+                viewBox={props.viewBox}
+                inline={!!props.inline}
+            />
+        </Neos.Fusion:Augmenter>
+    `
+}

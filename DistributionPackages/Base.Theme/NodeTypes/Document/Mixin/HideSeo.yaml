@@ -1,0 +1,33 @@
+##
+# Mixin for hiding all seo props
+#
+##
+
+'Base.Theme:Mixin.HideSeo':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        yoast:
+          tab: hidden
+  properties:
+    titleOverride: []
+    canonicalLink: []
+    openGraphType: []
+    openGraphTitle: []
+    openGraphDescription: []
+    openGraphImage: []
+    metaDescription: []
+    metaKeywords: []
+    metaRobotsNoindex: []
+    metaRobotsNofollow: []
+    twitterCardType: []
+    twitterCardCreator: []
+    twitterCardTitle: []
+    twitterCardDescription: []
+    twitterCardImage: []
+    xmlSitemapChangeFrequency: []
+    xmlSitemapPriority: []
+    plausibleDoNotTrack: []
+    focusKeyword: []
+    isCornerstone: []

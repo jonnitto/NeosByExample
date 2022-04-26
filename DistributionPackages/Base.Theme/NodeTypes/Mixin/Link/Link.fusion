@@ -1,0 +1,26 @@
+prototype(Base.Theme:Component.Link) < prototype(Neos.Fusion:Component) {
+    href = ${q(node).property('linkHref')}
+    content = ${q(node).property('linkText')}
+    appearance = ${q(node).property('linkAppearance')}
+
+    linkInBackend = true
+
+    fallbackContent = ${Translation.translate('readMore', 'read more', [], null, 'Base.Theme')}
+
+    @if.hasHrefAndContent = ${this.href && (this.content || this.fallbackContent)}
+    activateNodeUpdate = ${node.context.inBackend}
+
+    renderer = Base.Theme:Atom.Link {
+        href = ${props.href}
+        appearance = ${props.appearance}
+        content = ${props.content || props.fallbackContent}
+        x-data = ${props.activateNodeUpdate ? '{}' : null}
+        "x-on:neosnodeupdate.window" = ${props.activateNodeUpdate ? "liveUpdate.link($root, $event.detail, '" + props.fallbackContent + "')" : null}
+        @process.convertUris = Neos.Neos:ConvertUris {
+            @if.set = ${props.linkInBackend}
+            forceConversion = true
+        }
+    }
+}
+
+

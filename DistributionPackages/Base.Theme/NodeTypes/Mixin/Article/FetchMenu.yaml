@@ -1,0 +1,13 @@
+'Base.Theme:Mixin.Article.FetchMenu':
+  abstract: true
+  properties:
+    moreText:
+      type: string
+      ui:
+        label: Button label
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: end
+          editorOptions:
+            placeholder: read more

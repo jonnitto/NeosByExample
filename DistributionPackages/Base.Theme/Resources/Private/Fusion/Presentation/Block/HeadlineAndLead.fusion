@@ -1,0 +1,39 @@
+prototype(Base.Theme:Block.HeadlineAndLead) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        headline = ${PropTypes.string}
+        lead = ${PropTypes.string}
+        isFirstElement = ${PropTypes.boolean}
+        class = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
+    }
+
+    @styleguide {
+        props {
+            headline = 'What is Lorem Ipsum?'
+            lead = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        }
+    }
+
+    isFirstElement = true
+
+    _wrapperTagName = ${this.isFirstElement ? 'header' : 'div'}
+
+    @if.hasHeadline = ${this.headline}
+
+    renderer = afx`
+        <Neos.Fusion:Tag
+            tagName={props._wrapperTagName}
+            attributes.class={Carbon.String.merge(props.class, 'flex flex-col text-center px-safe')}
+            attributes.x-data={true}
+            attributes.x-typogrify={true}
+        >
+            <Base.Theme:Atom.Headline
+                isFirstElement={props.isFirstElement}
+                class="mt-1 text-4xl font-medium sm:text-5xl lg:text-6xl"
+                content={props.headline}
+            />
+            <p @if={props.lead} class='max-w-xl mt-5 mx-auto text-xl opacity-80'>
+                {props.lead}
+            </p>
+        </Neos.Fusion:Tag>
+    `
+}

@@ -1,0 +1,7 @@
+prototype(Neos.Seo:LangAttribute) {
+    value = 'de'
+    @if {
+        languageDimensionExists = true
+        onlyRenderWhenInLiveWorkspace = true
+    }
+}

@@ -1,0 +1,23 @@
+prototype(Base.Theme:Helper.BreakoutClass) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        value = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
+        breakout = ${PropTypes.oneOf(['wide', 'full', ''])}
+        padding = ${PropTypes.boolean}
+        content = ${PropTypes.boolean}
+    }
+
+    value = null
+    breakout = null
+    padding = false
+    content = false
+
+    renderer = Neos.Fusion:Match {
+        @subject = ${props.breakout + (props.padding ? 'Padding' : '')}
+        @default = ''
+        wide = '-breakout -breakout--wide'
+        full = '-breakout -breakout--full'
+        widePadding = '-breakout -breakout--wide-padding'
+        fullPadding = '-breakout -breakout--full-padding'
+        @process.merge = ${Carbon.String.merge(props.value, props.content ? '-content' : null, value)}
+    }
+}

@@ -1,0 +1,18 @@
+'Jonnitto.PrettyEmbedVideoPlatforms:Content.Video':
+  superTypes:
+    'Base.Theme:Mixin.Breakout': true
+    'Base.Theme:Mixin.TextWithContent': true
+    'Base.Theme:Mixin.TextWithContent.Position': true
+  ui:
+    position: 300
+    inspector:
+      groups:
+        look:
+          label: 'Look & Feel'
+          icon: 'fas fa-paint-brush'
+  properties:
+    breakout:
+      ui:
+        showInCreationDialog: true
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText'

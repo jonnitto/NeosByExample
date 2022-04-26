@@ -1,0 +1,21 @@
+prototype(Base.Theme:Atom.Counter) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        content = ${PropTypes.anyOf(PropTypes.integer, PropTypes.string)}
+    }
+
+    @styleguide {
+        props {
+            content = 53213
+        }
+    }
+
+    @if.hasContent = ${String.length(this.content)}
+    _isNumber = ${Type.isInteger(this.content)}
+
+    renderer = afx`
+        <span @if={props._isNumber} x-data={"counter(" + props.content + ")"} x-bind="counter">
+            {Carbon.Number.format(props.content, null, ',' , ".")}
+        </span>
+        {props._isNumber ? '' : props.content}
+    `
+}

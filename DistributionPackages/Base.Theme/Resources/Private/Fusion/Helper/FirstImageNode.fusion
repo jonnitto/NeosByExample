@@ -1,0 +1,16 @@
+prototype(Base.Theme:Helper.FirstImageNode) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+
+    renderer = Neos.Fusion:Case {
+        pageImage {
+            imageNode = ${q(props.node).filter('[image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0)}
+            condition = ${this.imageNode}
+            renderer = ${this.imageNode}
+        }
+        firstContentWithImage {
+            imageNode = ${q(props.node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0)}
+            condition = ${this.imageNode}
+            renderer = ${this.imageNode}
+        }
+    }
+}

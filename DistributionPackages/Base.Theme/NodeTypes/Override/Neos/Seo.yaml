@@ -1,0 +1,10 @@
+'Neos.Seo:TitleTagMixin':
+  abstract: true
+  properties:
+    titleOverride:
+      validation: ~
+
+'Neos.Seo:SeoMetaTagsMixin':
+  properties:
+    metaDescription:
+      validation: ~

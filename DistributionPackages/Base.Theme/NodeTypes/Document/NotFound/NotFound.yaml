@@ -1,0 +1,21 @@
+'Base.Theme:Document.NotFound':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Constraint.Document.Restricted': true
+    'Base.Theme:Mixin.HideSeo': true
+    'Base.Theme:Mixin.NotInMenu': true
+    'Neos.Seo:NoindexMixin': true
+    'Base.Theme:Mixin.DisableSearch': true
+  ui:
+    label: '404 Seite'
+    icon: 'fas fa-times-circle'
+    group: ~
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+  properties:
+    title:
+      defaultValue: '404'
+    uriPathSegment:
+      defaultValue: '404'

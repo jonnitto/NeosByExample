@@ -1,0 +1,32 @@
+prototype(Base.Theme:Atom.Image) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        integration = ${PropTypes.boolean.isRequired}
+        breakout = ${PropTypes.oneOf(['wide', 'full', ''])}
+    }
+    @styleguide {
+        props {
+            imageSource = Carbon.Image:Helper.ImageSource {
+                outputDummy = true
+            }
+            alternativeText = 'alternative text'
+        }
+    }
+
+    breakout = null
+    figureAttributes = Neos.Fusion:DataStructure
+    linkAdditonalAttributes = Neos.Fusion:DataStructure {
+        class = 'block'
+    }
+    integration = ${!!node}
+    _breakoutForWrapper = ${this.breakout}
+
+    renderer = Neos.Fusion:Augmenter {
+        class = Base.Theme:Helper.BreakoutClass {
+            breakout = ${props.breakout}
+        }
+        content = afx`
+            <Carbon.Image:Component.Presentation.Picture {...props} breakout={null} @if={!props.integration}/>
+            <Carbon.Image:Component.Picture {...props} breakout={null} @if={props.integration}/>
+        `
+    }
+}

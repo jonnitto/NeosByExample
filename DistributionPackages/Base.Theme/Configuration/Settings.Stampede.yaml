@@ -1,0 +1,6 @@
+Sitegeist:
+  Stampede:
+    collections:
+      icons:
+        label: Icons
+        path: 'resource://Base.Theme/Private/Fusion/Presentation/Atom/Icon/Assets'

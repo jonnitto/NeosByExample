@@ -1,0 +1,37 @@
+{
+    "name": "base/theme",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/seo": "^3.2",
+        "neos/redirecthandler-databasestorage": "^5.0",
+        "neos/redirecthandler-neosadapter": "^4.3",
+        "neos/redirecthandler-ui": "^2.4",
+        "carbon/colorvalues": "^1.0.0",
+        "carbon/eel": "^2.1",
+        "carbon/firstelement": "^2.0",
+        "carbon/hyphen": "^3.0",
+        "carbon/image": "^3.0",
+        "carbon/includeassets": "^5.0",
+        "carbon/notification": "^2.1",
+        "flowpack/nodetemplates": "^1.2",
+        "jonnitto/imagesinarow": "^4.0.0",
+        "jonnitto/outdatedbrowser": "^4.1",
+        "jonnitto/photoswipe": "^3.2",
+        "jonnitto/prettyembedvideoplatforms": "^2.0",
+        "mhsdesign/liveinspectorjsevents": "^2.0",
+        "packagefactory/atomicfusion-proptypes": "^2.0",
+        "punktde/archivist": "^2.8.0",
+        "sitegeist/klarschiff": "^3.0",
+        "sitegeist/monocle": "^7.1",
+        "sitegeist/monocle-backstopjs": "^1.1",
+        "sitegeist/monocle-proptypes": "^1.0",
+        "sitegeist/stampede": "^1.1",
+        "tms/select": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Base\\Theme\\": "Classes/"
+        }
+    }
+}

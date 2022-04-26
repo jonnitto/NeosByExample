@@ -1,0 +1,75 @@
+prototype(Base.Theme:Helper.MenuItems) < prototype(Neos.Fusion:Component) {
+    maximumLevels = 1
+    maxItemsOnFetch = 4
+    filter = 'Neos.Neos:Document,!Base.Theme:Mixin.NotInMenu'
+
+    renderer = Base.Theme:Helper.MenuItems.Map {
+        maxItemsOnFetch = ${props.maxItemsOnFetch}
+        items = afx`
+            <Neos.Neos:MenuItems {...props}/>`
+    }
+}
+
+
+prototype(Base.Theme:Helper.MenuItems.Map) < prototype(Neos.Fusion:Component) {
+    items = ${[]}
+    maxItemsOnFetch = 4
+
+    renderer = Neos.Fusion:Map {
+        items = ${props.items}
+        itemRenderer = Neos.Fusion:Component {
+            node = ${item.node}
+            isFetch = ${q(this.node).is('[instanceof Base.Theme:Mixin.Article.FetchMenu]')}
+
+            renderer = Neos.Fusion:DataStructure {
+                node = ${props.node}
+                name = ${q(props.node).property('_nodeType.name')}
+                label = ${q(props.node).property('title')}
+                description = ${q(props.node).property('subtitle')}
+                menuLevel = ${item.node.depth - 2}
+                moreText = ${q(item.node).property('moreText') || 'Read more'}
+                menuDescription = ${q(props.node).property('menuDescription') || this.description}
+                ajax = ${props.isFetch}
+                href = Neos.Neos:NodeUri {
+                    node = ${props.node}
+                }
+                subItems = Base.Theme:Helper.MenuItems.Map {
+                    items = Neos.Fusion:Case {
+                        isBlog {
+                            condition = ${q(props.node).is('[instanceof Base.Theme:Document.Blog.Container]')}
+                            renderer = Neos.Neos:MenuItems {
+                                @if.hasItems = ${!!Array.length(this.itemCollection)}
+                                itemCollection = ${q(props.node).find('[instanceof Base.Theme:Document.Blog.Item]').slice(0, props.maxItemsOnFetch).get()}
+                            }
+                        }
+                        isFetch {
+                            condition = ${item.subItems && props.isFetch}
+                            renderer = ${Array.slice(item.subItems, 0, props.maxItemsOnFetch)}
+                        }
+                        default {
+                            condition = true
+                            renderer = ${item.subItems}
+                        }
+                    }
+                }
+
+                image = Neos.Fusion:Case {
+                    isFetch {
+                        condition = ${props.isFetch}
+                        renderer = false
+                    }
+                    pageImage {
+                        image = ${q(props.node).filter('[image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0)}
+                        condition = ${this.image}
+                        renderer = ${q(this.image).property('image')}
+                    }
+                    firstContentWithImage {
+                        image = ${q(props.node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0)}
+                        condition = ${this.image}
+                        renderer = ${q(this.image).property('image')}
+                    }
+                }
+            }
+        }
+    }
+}

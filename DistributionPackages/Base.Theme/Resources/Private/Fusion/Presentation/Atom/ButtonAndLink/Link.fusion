@@ -1,0 +1,39 @@
+prototype(Base.Theme:Atom.Link) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        appearance = ${PropTypes.oneOf(['main', 'minor', 'ghost', 'link'])}
+        href = ${PropTypes.string}
+        content = ${PropTypes.string}
+        bigArea = ${PropTypes.boolean}
+        dark = ${PropTypes.boolean}
+    }
+
+    @styleguide {
+        props {
+            appearance = 'main'
+            content = 'Read more'
+            bigArea = false
+            dark = false
+            href = '#'
+        }
+    }
+
+    appearance = 'minor'
+
+    href = null
+    content = null
+
+    bigArea = false
+    inline = true
+    dark = false
+
+    content.@process.fallback = ${value || Translation.translate('readMore', 'read more', [], 'Main', 'Base.Theme')}
+
+    @if.hasHref = ${!!this.href}
+
+    renderer = afx`
+        <a>
+            <Base.Theme:Atom.ButtonAndLink.Fragment.Attributes @path="attributes" {...props} />
+            <Base.Theme:Atom.ButtonAndLink.Fragment.Content {...props} />
+        </a>
+    `
+}

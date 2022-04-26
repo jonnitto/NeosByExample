@@ -1,0 +1,19 @@
+PunktDe:
+  Archivist:
+    sortingInstructions:
+      'Base.Theme:Document.Blog.Item':
+        hierarchyRoot: "${q(node).closest('[instanceof Base.Theme:Document.Blog.Container]').get(0)}"
+        sorting: "${q(a).property('_hiddenBeforeDateTime') > q(b).property('_hiddenBeforeDateTime')}"
+        condition: '${node.hiddenBeforeDateTime ? true : false}'
+        publishHierarchy: true
+        context:
+          publishDate: '${node.hiddenBeforeDateTime}'
+        hierarchy:
+          - type: 'Base.Theme:Document.Blog.Year'
+            properties:
+              name: '${Date.year(publishDate)}'
+              title: '${Date.year(publishDate)}'
+              uriPathSegment: '${Date.year(publishDate)}'
+              _hiddenInIndex: '${true}'
+            sorting: "${q(a).property('title') > q(b).property('title')}"
+            identity: uriPathSegment

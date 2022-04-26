@@ -1,0 +1,5 @@
+Flowpack:
+  NodeTemplates:
+    defaultEelContext:
+      Carbon.String: 'Carbon\Eel\EelHelper\StringHelper'
+      Carbon.Array: 'Carbon\Eel\EelHelper\ArrayHelper'

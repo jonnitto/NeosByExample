@@ -1,0 +1,14 @@
+##
+# Document NodeType for meta pages like imprint, etc.
+#
+##
+
+'Base.Theme:Document.Meta':
+  superTypes:
+    'Base.Theme:Document.ContentPage': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Mixin.NotInMenu': true
+  ui:
+    label: Metaseite
+    icon: info-circle
+    position: 900

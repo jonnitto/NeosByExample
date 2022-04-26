@@ -1,0 +1,81 @@
+prototype(Base.Theme:Helper.SocialNetworks) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        linkedin = ${PropTypes.string}
+        facebook = ${PropTypes.string}
+        instagram = ${PropTypes.string}
+        twitter = ${PropTypes.string}
+        youtube = ${PropTypes.string}
+        vimeo = ${PropTypes.string}
+        wikipedia = ${PropTypes.string}
+        email = ${PropTypes.string}
+        phone = ${PropTypes.string}
+        mobile = ${PropTypes.string}
+        website = ${PropTypes.string}
+        plural = ${PropTypes.boolean}
+        networks = ${PropTypes.arrayOf(PropTypes.oneOf(['linkedin', 'facebook', 'instagram', 'twitter', 'youtube', 'vimeo', 'wikipedia', 'email', 'phone', 'mobile', 'website']))}
+    }
+
+    networks = ${['linkedin', 'instagram', 'facebook', 'twitter', 'youtube', 'vimeo', 'wikipedia', 'email', 'phone', 'mobile']}
+    plural = true
+
+    @if.hasNetworks = ${Carbon.Array.check(this.networks)}
+
+    renderer = Neos.Fusion:Map {
+        items = ${props.networks}
+        itemName = 'network'
+        itemRenderer = Neos.Fusion:Component {
+            @if.hasHref = ${props[network]}
+            _href = ${props[network]}
+            _plural = ${props.plural}
+            type = Neos.Fusion:Match {
+                @subject = ${network}
+                @default = 'link'
+                email = 'email'
+                phone = 'tel'
+                mobile = 'tel'
+                website = 'website'
+            }
+
+            renderer = Neos.Fusion:DataStructure {
+                type = ${props.type}
+                network = ${network}
+                href = Neos.Fusion:Match {
+                    @subject = ${props.type}
+                    @default = ${(String.pregMatch(props._href, '/^https?:\/\//') ? '' : 'https://') + props._href}
+                    email = ${'mailto:' + props._href}
+                    tel = Base.Theme:Helper.Phone {
+                        value = ${props._href}
+                    }
+                }
+                content = Neos.Fusion:Match {
+                    @subject = ${props.type}
+                    @default = ${props._href}
+                    link = ${Translation.translate('social.' + network, network, [], null, 'Base.Theme')}
+                    website = ${String.pregReplace(props._href, '/^https?:\/\//', '')}
+                }
+                label = Neos.Fusion:Component {
+                    selector = Neos.Fusion:Match {
+                        @subject = ${props.type + (props._plural ? 'Us' : 'Me')}
+                        @default = 'social.visitUs'
+                        linkMe = 'social.visitMe'
+                        emailUs = 'writeUsAnEmail'
+                        emailMe = 'writeMeAnEmail'
+                        telUs = 'callUsWithNumber'
+                        telMe = 'callMeWithNumber'
+                        websiteMe = 'visitMyWebsite'
+                        websiteUs = 'visitOurWebsite'
+                    }
+                    value = Neos.Fusion:Match {
+                        @subject = ${props.type}
+                        @default = ${props._href}
+                        website = ${String.pregReplace(props._href, '/^https?:\/\//', '')}
+                        link = ${Translation.translate('social.' + network, network, [], null, 'Base.Theme')}
+                    }
+                    renderer = ${Translation.translate(props.selector, null, [props.value], null, 'Base.Theme')}
+
+                }
+            }
+        }
+        @process.filter = ${Array.filter(value)}
+    }
+}

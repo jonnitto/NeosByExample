@@ -1,0 +1,30 @@
+prototype(Base.Theme:Atom.Blockquote) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        content = ${PropTypes.string}
+        cite = ${PropTypes.string}
+        function = ${PropTypes.string}
+    }
+
+    @styleguide {
+        props {
+            content = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>'
+            cite = 'James Black'
+            function = 'Happy customer'
+        }
+    }
+
+
+    @if.hasContent = ${this.content}
+
+    renderer = afx`
+        <blockquote class={Carbon.String.merge(props.class, '-quotes w-full prose prose-lg mx-auto p-4 font-medium italic border-l-4 border-neos-dark')}>
+            {props.content}
+            <footer @if={props.cite || props.function} class="mt-6 text-base font-medium not-prose">
+                <p class="!m-0">
+                    {props.cite}
+                    <span @if={props.function} class="opacity-60 block">{props.function}</span>
+                </p>
+            </footer>
+        </blockquote>
+    `
+}

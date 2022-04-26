@@ -1,0 +1,143 @@
+.btn--main,
+.btn--minor,
+.btn--ghost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: theme("fontWeight.medium");
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  @media screen(md) {
+    font-size: 1.25rem;
+    line-height: 1.75;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.btn--inline {
+    display: inline-flex;
+  }
+}
+
+.btn--main,
+.btn--minor {
+  opacity: 0.9;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: theme("spacing.2") theme("spacing.8");
+
+  @media screen(md) {
+    padding: theme("spacing.2") theme("spacing.10");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.btn--main {
+  color: #fff;
+  background: theme("colors.neos.dark");
+
+  &.btn--dark {
+    color: theme("colors.neos.dark");
+    background: #fff;
+  }
+}
+
+.btn--minor {
+  color: #fff;
+  background: theme("colors.neos.light");
+
+  &.btn--dark {
+    color: theme("colors.neos.light");
+    background: #fff;
+  }
+}
+
+.btn--ghost {
+  color: currentColor;
+  border-color: currentColor;
+  border-width: 2px;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  & .btn__ghost {
+    position: relative;
+    width: 100%;
+  }
+
+  & .btn__bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background-color: currentColor;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  & .btn__content {
+    display: flex;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: theme("spacing.2") theme("spacing.8");
+    align-items: center;
+    justify-content: center;
+
+    @media screen(md) {
+      padding: theme("spacing.2") theme("spacing.10");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    text-shadow: none;
+
+    & .btn__bg {
+      opacity: 1;
+    }
+
+    & .btn__content {
+      filter: brightness(0) invert(100%);
+    }
+
+    &.btn--dark .btn__content {
+      filter: brightness(1) invert(100%);
+    }
+  }
+
+  &:disabled {
+    & .btn__bg {
+      opacity: 0 !important;
+    }
+
+    & .btn__content {
+      filter: none !important;
+    }
+  }
+}
+
+.btn--link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: theme("colors.neos.dark");
+  font-weight: theme("fontWeight.medium");
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &.btn--dark {
+    color: theme("colors.neos.light");
+  }
+}

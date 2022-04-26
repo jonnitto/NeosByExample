@@ -1,0 +1,28 @@
+'Base.Theme:Document.Blog.Item':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Constraint.Document.Restricted': true
+  label: "${Neos.Node.labelForNode(node).prefix(q(node).property('_hiddenBeforeDateTime') ? Date.format(q(node).property('_hiddenBeforeDateTime'), node.context.live ? 'd.m.Y' : 'm-d') + ': ' : '').properties('title')}"
+  ui:
+    label: Article
+    icon: envelope-open-text
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Base.Theme:Content.Blog.Teaser': false
+  properties:
+    _hiddenBeforeDateTime:
+      ui:
+        label: Veröffentlichungsdatum
+        reloadPageIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: document
+          position: end
+          editorOptions:
+            minuteStep: 15
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []

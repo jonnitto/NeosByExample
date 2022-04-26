@@ -1,0 +1,32 @@
+prototype(Base.Theme:Module.FactsAndFigures.Item) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        headline = ${PropTypes.anyOf(PropTypes.string, PropTypes.integer)}
+        text = ${PropTypes.string}
+        inBackend = ${PropTypes.boolean}
+    }
+
+    @styleguide {
+        props {
+            headline = '24/7'
+            text = 'Verfügbarkeit'
+        }
+    }
+
+    inBackend = false
+    @if.hasContent = ${this.inBackend || String.length(this.headline)}
+
+    renderer = afx`
+        <div class="flex flex-col border-b border-slate-100 p-6 text-center sm:border-0 sm:border-r">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-neos-light">
+                <Neos.Fusion:Loop items={Carbon.String.splitIntegerAndString(props.text)}>
+                    <Base.Theme:Atom.Counter content={item} />
+                </Neos.Fusion:Loop>
+            </dt>
+            <dd class="order-1 text-5xl font-medium text-neos-dark">
+                <Neos.Fusion:Loop items={Carbon.String.splitIntegerAndString(props.headline)}>
+                    <Base.Theme:Atom.Counter content={item} />
+                </Neos.Fusion:Loop>
+            </dd>
+        </div>
+    `
+}

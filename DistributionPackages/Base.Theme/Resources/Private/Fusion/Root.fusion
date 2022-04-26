@@ -1,0 +1,34 @@
+include: **/*.fusion
+include: ../../../NodeTypes/**/*.fusion
+
+root {
+    ajax {
+        @position = 'start 1'
+        condition = Neos.Fusion:Value {
+            request = ${request.arguments.ajax}
+            canRender = Neos.Fusion:CanRender {
+                type = ${q(documentNode).property('_nodeType.name') + '.Ajax'}
+            }
+            value = ${this.request && this.canRender}
+        }
+        type = ${q(node).property('_nodeType.name') + '.Ajax'}
+    }
+
+    json {
+        @position = 'start 2'
+        condition = Neos.Fusion:Value {
+            request = ${request.arguments.json}
+            canRender = Neos.Fusion:CanRender {
+                type = ${q(documentNode).property('_nodeType.name') + '.Json'}
+            }
+            value = ${this.request && this.canRender}
+        }
+        type = ${q(node).property('_nodeType.name') + '.Json'}
+    }
+
+
+    @cache.entryIdentifier {
+        ajax = ${request.arguments.ajax ? 'ajax' : 'default'}
+        json = ${request.arguments.json ? 'json' : 'default'}
+    }
+}

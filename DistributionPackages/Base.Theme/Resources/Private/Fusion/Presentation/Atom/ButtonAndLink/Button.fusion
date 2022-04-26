@@ -1,0 +1,36 @@
+prototype(Base.Theme:Atom.Button) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        appearance = ${PropTypes.oneOf(['main', 'minor', 'ghost', 'link'])}
+        type = ${PropTypes.string}
+        content = ${PropTypes.string}
+        bigArea = ${PropTypes.boolean}
+        dark = ${PropTypes.boolean}
+        inline = ${PropTypes.boolean}
+    }
+
+    @styleguide {
+        props {
+            appearance = 'main'
+            content = 'Read more'
+            bigArea = false
+            dark = false
+        }
+    }
+
+    appearance = 'minor'
+    type = 'button'
+    content = null
+
+    bigArea = false
+    inline = true
+    dark = false
+
+    content.@process.fallback = ${value || Translation.translate('readMore', 'read more', [], 'Main', 'Base.Theme')}
+
+    renderer = afx`
+        <button>
+            <Base.Theme:Atom.ButtonAndLink.Fragment.Attributes @path="attributes" {...props} />
+            <Base.Theme:Atom.ButtonAndLink.Fragment.Content {...props} />
+        </button>
+    `
+}

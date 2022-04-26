@@ -1,0 +1,32 @@
+prototype(Base.Theme:Block.BackButton) < prototype(Neos.Fusion:Component) {
+    text = null
+    appearance = 'link'
+    jsBack = true
+    center = false
+    href = null
+
+    renderer = afx`
+        <Base.Theme:Atom.Button
+            @if={props.jsBack}
+            x-data='historyBack'
+            x-on:click='back'
+            x-show='show'
+            appearance={props.appearance}
+            class={[props.center ? 'justify-self-center' : 'justify-self-start', 'group']}
+        >
+            <Base.Theme:Atom.Icon class='h-5 w-5 mr-2 transform rotate-90 transition-transform group-hover:-translate-x-1 group-focus:-translate-x-1' icon='chevron-down' />
+            {props.text || Translation.translate('back', 'Back', [], 'Main', 'Base.Theme')}
+        </Base.Theme:Atom.Button>
+        <Base.Theme:Atom.Link
+            @if={props.href}
+            href={props.href}
+            x-data={props.jsBack ? 'hrefBack' : null}
+            x-show={props.jsBack ? 'show' : null}
+            appearance={props.appearance}
+            class={[props.center ? 'justify-self-center' : 'justify-self-start', 'group']}
+        >
+            <Base.Theme:Atom.Icon class='h-5 w-5 mr-2 transform rotate-90 transition-transform group-hover:-translate-x-1 group-focus:-translate-x-1' icon='chevron-down' />
+            {props.text || Translation.translate('back', 'Back', [], 'Main', 'Base.Theme')}
+        </Base.Theme:Atom.Link>
+    `
+}

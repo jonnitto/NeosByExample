@@ -1,0 +1,52 @@
+body {
+  @apply bg-white text-slate-900 font-light;
+
+  font-feature-settings: "cpsp", "kern", "liga", "case";
+}
+
+b,
+strong {
+  @apply font-medium;
+}
+
+i,
+em {
+  @apply not-italic;
+}
+
+picture img {
+  @apply mx-auto;
+}
+
+a > :not(.absolute.inset-0),
+button > :not(.absolute.inset-0) {
+  pointer-events: none;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.8) contrast(1.2);
+    transition: filter 0.2s linear;
+  }
+
+  img:hover,
+  img:focus {
+    filter: none;
+  }
+} */
+
+[x-cloak] {
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+input,
+textarea {
+  font-weight: 300;
+  accent-color: theme("colors.neos.dark");
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @apply checked:text-neos-dark focus:ring-neos-dark;
+}

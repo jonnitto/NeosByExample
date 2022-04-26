@@ -1,0 +1,8 @@
+prototype(Base.Theme:Section.Header.Fragment.DropdownClose) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <button x-on:click="dropdown=false" type="button" class="sr-only !absolute !outline-none !p-2 top-2 right-2 focus:not-sr-only inline-flex bg-slate-100 items-center justify-center text-slate-900 ring-2 ring-neos-light">
+            <span class="sr-only">{Translation.translate('navigation.close', 'Close menu', [], null, 'Base.Theme')}</span>
+            <Base.Theme:Atom.Icon icon="close" class="h-5 w-5" />
+        </button>
+    `
+}

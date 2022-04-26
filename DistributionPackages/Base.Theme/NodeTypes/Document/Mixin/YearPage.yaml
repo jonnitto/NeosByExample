@@ -1,0 +1,25 @@
+'Base.Theme:Mixin.YearPage':
+  abstract: true
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Constraint.Document.Restricted': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Mixin.NotInMenu': true
+    'Base.Theme:Mixin.SynUriPathSegmentWithTitle': true
+  ui:
+    label: Jahr
+    icon: 'far fa-calendar'
+    group: ~
+    inspector:
+      groups:
+        document:
+          tab: hidden
+  properties:
+    firstRed:
+      ui:
+        inspector:
+          hidden: false
+    subheadline:
+      ui:
+        inspector:
+          hidden: false

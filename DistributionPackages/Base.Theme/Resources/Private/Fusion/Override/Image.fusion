@@ -1,0 +1,7 @@
+prototype(Carbon.Image:Component.Presentation.Image) {
+    loading = 'lazy'
+}
+
+prototype(Carbon.Image:Component.Presentation.Picture) {
+    loading = 'lazy'
+}

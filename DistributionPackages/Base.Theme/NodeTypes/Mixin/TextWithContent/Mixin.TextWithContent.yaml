@@ -1,0 +1,37 @@
+'Base.Theme:Mixin.TextWithContent':
+  abstract: true
+  superTypes:
+    'Base.Theme:Mixin.TextWithContent.Plain': true
+  properties:
+    enableText:
+      type: boolean
+      ui:
+        label: 'Add text box'
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 'start'
+    textLeft:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? false : true'
+    ratio:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? false : true'
+    backgroundColor:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? !!node.parent.match("\/content@") : true'
+    linkHref:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? false : true'
+    linkAppearance:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText && node.properties.linkHref ? false : true'
+    linkText:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText && node.properties.linkHref ? false : true'

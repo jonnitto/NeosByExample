@@ -1,0 +1,5 @@
+prototype(Base.Theme:ContentCollection) < prototype(Neos.Neos:ContentCollection) {
+    nodePath = 'main'
+    tagName = 'main'
+    attributes.class = '-content -breakout -main'
+}

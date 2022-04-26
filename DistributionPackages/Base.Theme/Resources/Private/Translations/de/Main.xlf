@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Base.Theme" source-language="de" datatype="plaintext">
+        <body>
+            <group id="contentcollection.label" restype="x-gettext-plurals">
+                <trans-unit id="contentcollection.label[0]" xml:space="preserve">
+                    <source>{0} Inhaltselement</source>
+                </trans-unit>
+                <trans-unit id="contentcollection.label[1]" xml:space="preserve">
+                    <source>{0} Inhaltselemente</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="back" xml:space="preserve">
+                <source>Zurück</source>
+            </trans-unit>
+            <trans-unit id="copyright" xml:space="preserve">
+                <source><![CDATA[&copy; {year} {company}, Alle Rechte vorbehalten.]]></source>
+            </trans-unit>
+            <trans-unit id="social.twitter" xml:space="preserve">
+                <source>Twitter</source>
+            </trans-unit>
+            <trans-unit id="social.linkedin" xml:space="preserve">
+                <source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="social.facebook" xml:space="preserve">
+                <source>facebook</source>
+            </trans-unit>
+            <trans-unit id="social.instagram" xml:space="preserve">
+                <source>Instagram</source>
+            </trans-unit>
+            <trans-unit id="social.youtube" xml:space="preserve">
+                <source>YouTube</source>
+            </trans-unit>
+            <trans-unit id="social.vimeo" xml:space="preserve">
+                <source>Vimeo</source>
+            </trans-unit>
+            <trans-unit id="social.wikipedia" xml:space="preserve">
+                <source>Wikipedia</source>
+            </trans-unit>
+            <trans-unit id="social.visitUs" xml:space="preserve">
+                <source>Besuchen Sie uns auf {0}</source>
+            </trans-unit>
+            <trans-unit id="callUs" xml:space="preserve">
+                <source>Rufen Sie uns an</source>
+            </trans-unit>
+            <trans-unit id="callMe" xml:space="preserve">
+                <source>Rufen Sie mich an</source>
+            </trans-unit>
+            <trans-unit id="callUsWithNumber" xml:space="preserve">
+                <source>Rufen Sie uns an: {0}</source>
+            </trans-unit>
+            <trans-unit id="callMeWithNumber" xml:space="preserve">
+                <source>Rufen Sie mich an: {0}</source>
+            </trans-unit>
+            <trans-unit id="visitMyWebsite" xml:space="preserve">
+                <source>Besuchen Sie mich auf {0}</source>
+            </trans-unit>
+            <trans-unit id="visitOurWebsite" xml:space="preserve">
+                <source>Besuchen Sie uns auf {0}</source>
+            </trans-unit>
+            <trans-unit id="writeMeAnEmail" xml:space="preserve">
+                <source>Schreiben Sie mir eine E-Mail</source>
+            </trans-unit>
+            <trans-unit id="social.visitMe" xml:space="preserve">
+                <source>Besuchen Sie mich auf {0}</source>
+            </trans-unit>
+            <trans-unit id="writeUsAnEmail" xml:space="preserve">
+                <source>Schreiben Sie uns eine E-Mail</source>
+            </trans-unit>
+            <trans-unit id="navigation.home" xml:space="preserve">
+                <source>Home</source>
+            </trans-unit>
+            <trans-unit id="navigation.open" xml:space="preserve">
+                <source>Menü öffnen</source>
+            </trans-unit>
+            <trans-unit id="navigation.close" xml:space="preserve">
+                <source>Menü schließen</source>
+            </trans-unit>
+            <trans-unit id="readMore" xml:space="preserve">
+                <source>weiterlesen</source>
+            </trans-unit>
+            <trans-unit id="imageFromPerson" xml:space="preserve">
+                <source>Bild von {0}</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

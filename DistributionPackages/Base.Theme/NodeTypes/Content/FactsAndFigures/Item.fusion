@@ -1,0 +1,10 @@
+prototype(Base.Theme:Content.FactsAndFigures.Item) < prototype(Neos.Neos:ContentComponent) {
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+
+    inBackend = ${node.context.inBackend}
+
+    renderer = Base.Theme:Module.FactsAndFigures.Item {
+        @apply.props = ${props}
+    }
+}

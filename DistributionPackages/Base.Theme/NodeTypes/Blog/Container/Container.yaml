@@ -1,0 +1,21 @@
+'Base.Theme:Document.Blog.Container':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Mixin.Article.FetchMenu': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Constraint.Document.Restricted': true
+  ui:
+    label: Blog
+    icon: newspaper
+    position: 940
+  constraints:
+    nodeTypes:
+      'Base.Theme:Document.Blog.Item': true
+      'Base.Theme:Document.Blog.Year': true
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    lead:
+      options:
+        preset: 'text.lead'

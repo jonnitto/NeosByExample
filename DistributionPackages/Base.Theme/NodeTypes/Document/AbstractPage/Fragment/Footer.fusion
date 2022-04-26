@@ -1,0 +1,50 @@
+footer = Base.Theme:Section.Footer {
+    sections = Neos.Fusion:Map {
+        items = ${[1, 2]}
+        itemRenderer = Neos.Fusion:DataStructure {
+            title = ${q(site).property('footerTitle' + item)}
+            items = Neos.Fusion:Map {
+                items = ${q(site).property('footerNavigation' + item)}
+                itemRenderer = Neos.Fusion:DataStructure {
+                    label = ${q(item).property('title')}
+                    href = Neos.Neos:NodeUri {
+                        node = ${item}
+                    }
+                }
+            }
+            @process.filter = ${Carbon.Array.check(value)}
+        }
+        @process.filter = ${Array.filter(value)}
+    }
+
+    searchAction = Neos.Neos:NodeUri {
+        node = ${q(site).children('search').get(0)}
+    }
+
+    phone = ${q(site).property('phone')}
+    email = ${q(site).property('email')}
+    linkedin = ${q(site).property('socialLinkedin')}
+    facebook = ${q(site).property('socialFacebook')}
+    instagram = ${q(site).property('socialInstagram')}
+    twitter = ${q(site).property('socialTwitter')}
+    youtube = ${q(site).property('socialYoutube')}
+    vimeo = ${q(site).property('socialVimeo')}
+    wikipedia = ${q(site).property('socialWikipedia')}
+
+    @cache {
+        mode = 'cached'
+        maximumLifetime = ${Carbon.Date.secondsUntil('first day of January next year', false)}
+        entryIdentifier {
+            static = 'footer'
+            site = ${site}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+            2 = ${Neos.Caching.nodeTag(q(site).property('footerNavigation1'))}
+            3 = ${Neos.Caching.nodeTag(q(site).property('footerNavigation2'))}
+            4 = ${Neos.Caching.nodeTypeTag('Base.Theme:Document.Reference.Container', site)}
+            5 = ${Neos.Caching.nodeTypeTag('Base.Theme:Document.Reference.Item', site)}
+            6 = ${Neos.Caching.nodeTypeTag('Base.Theme:Content.Award', site)}
+        }
+    }
+}

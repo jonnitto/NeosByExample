@@ -1,0 +1,46 @@
+prototype(Base.Theme:Document.Blog.Item) < prototype(Base.Theme:Document.AbstractPage) {
+    hero = Base.Theme:Block.ItemHero {
+        date = ${q(node).property('_hiddenBeforeDateTime')}
+        backHref = Neos.Neos:NodeUri {
+            node = ${q(node).closest('[instanceof Base.Theme:Document.Blog.Container]').get(0)}
+        }
+        jsBack = ${node.context.live}
+    }
+    content = Base.Theme:ContentCollection
+    aside = Neos.Fusion:Component {
+        newer = ${q(node).prev()}
+        older = ${q(node).nextAll().slice(0, this.newer.count() ? 1 : 2)}
+
+        newerNextChapter = ${q(node).parent().prev().children('[instanceof Base.Theme:Document.Blog.Item]').sort('_hiddenBeforeDateTime', 'ASC')}
+        olderNextChapter = ${q(node).parent().next().children('[instanceof Base.Theme:Document.Blog.Item]').sort('_hiddenBeforeDateTime', 'DESC')}
+
+        renderer = Neos.Fusion:Component {
+            items = Neos.Fusion:Map {
+                items = ${q(node).add(props.older).add(props.newer).add(props.newerNextChapter).add(props.olderNextChapter).remove(node).slice(0,2)}
+                itemName = 'node'
+                itemRenderer = Base.Theme:Helper.Teaser.Data
+                @process.filter = ${Array.filter(value, item => !!item.image)}
+            }
+            @if.hasItems = ${Carbon.Array.check(this.items)}
+            renderer = afx`
+                <h2 class="mb-4 font-medium text-2xl">More articles:</h2>
+                <div class="w-full mt-12max-w-lg mx-auto grid gap-5 sm:grid-cols-2 lg:max-w-none">
+                    <Neos.Fusion:Loop items={props.items}>
+                        <Base.Theme:Block.Teaser {...item} />
+                    </Neos.Fusion:Loop>
+                </div>
+            `
+        }
+        @cache {
+            mode = 'cached'
+            entryIdentifier {
+                node = ${node}
+            }
+            entryTags {
+                1 = ${Neos.Caching.nodeTag(node)}
+                2 = ${Neos.Caching.nodeTypeTag('Base.Theme:Document.Blog.Item', node)}
+                3 = ${Neos.Caching.nodeTypeTag('Base.Theme:Document.Blog.Year', node)}
+            }
+        }
+    }
+}

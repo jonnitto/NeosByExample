@@ -1,0 +1,15 @@
+'Base.Theme:Content.Headline':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.FirstElement:Mixin': true
+  ui:
+    label: Überschrift
+    icon: heading
+    position: 10
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    lead:
+      options:
+        preset: 'text.lead'

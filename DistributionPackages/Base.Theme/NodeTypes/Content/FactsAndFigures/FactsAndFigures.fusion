@@ -1,0 +1,34 @@
+prototype(Base.Theme:Content.FactsAndFigures) < prototype(Neos.Neos:ContentComponent) {
+    backgroundColor = ${q(node).property('backgroundColor')}
+
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = false
+    }
+
+    inBackend = ${node.context.inBackend}
+    activateNodeUpdate = ${this.inBackend}
+
+    renderer = Base.Theme:Module.FactsAndFigures {
+        @apply.props = ${props}
+        content = Neos.Neos:ContentCollectionRenderer
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            collection = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.descendantOfTag(node)}
+            2 = ${Neos.Caching.nodeTag(node)}
+        }
+        maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}
+    }
+
+    @exceptionHandler = 'Neos\\Neos\\Fusion\\ExceptionHandlers\\NodeWrappingHandler'
+}

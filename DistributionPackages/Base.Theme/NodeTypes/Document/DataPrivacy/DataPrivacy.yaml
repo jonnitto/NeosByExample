@@ -1,0 +1,18 @@
+'Base.Theme:Document.DataPrivacy':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Constraint.Document.Restricted': true
+    'Base.Theme:Mixin.NotInMenu': true
+  ui:
+    label: Datenschutz
+    icon: gavel
+    group: ~
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+  properties:
+    title:
+      defaultValue: 'Datenschutzerklärung'
+    uriPathSegment:
+      defaultValue: 'datenschutzerklaerung'

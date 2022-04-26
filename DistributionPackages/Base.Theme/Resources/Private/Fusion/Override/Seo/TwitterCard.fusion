@@ -1,0 +1,16 @@
+prototype(Neos.Seo:TwitterCard) {
+    siteHandle = ${q(site).property('socialTwitter')}
+    siteHandle.@process.split = ${value ? Array.last(String.split(value, 'twitter.com/')) : null}
+    image {
+        pageImage {
+            image = ${q(node).filter('[image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0)}
+            condition = ${this.image}
+            renderer = ${q(this.image).property('image')}
+        }
+        firstContentWithImage {
+            image = ${q(node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0)}
+            condition = ${this.image}
+            renderer = ${q(this.image).property('image')}
+        }
+    }
+}

@@ -1,0 +1,41 @@
+'Base.Theme:Mixin.Article.Teaser':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Base.Theme:Mixin.Article.Limit': true
+  ui:
+    group: teaser
+    position: 100
+  properties:
+    headline:
+      options:
+        preset: text.headline
+    text:
+      options:
+        preset: text.lead
+    rootNode:
+      type: reference
+      ui:
+        label: Quelle
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 10
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            dataSourceIdentifier: 'tms-select-nodedata'
+            dataSourceDisableCaching: true
+            dataSourceAdditionalData:
+              labelPropertyName: title
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+    moreText:
+      type: string
+      ui:
+        label: Button label
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 20
+          editorOptions:
+            placeholder: Mehr

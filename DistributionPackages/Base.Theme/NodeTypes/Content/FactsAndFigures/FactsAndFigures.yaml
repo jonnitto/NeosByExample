@@ -1,0 +1,33 @@
+'Base.Theme:Content.FactsAndFigures':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Base.Theme:Mixin.BackgroundColor': true
+    'Base.Theme:Mixin.ContentWithContentCollection': true
+  ui:
+    label: 'Facts & Figures'
+    icon: stopwatch-20
+    position: 1200
+    inspector:
+      groups:
+        settings:
+          label: Settings
+          position: 5
+          icon: paint-brush
+  options:
+    template:
+      childNodes:
+        items:
+          type: 'Base.Theme:Content.FactsAndFigures.Item'
+          withItems: '${Array.range(1,3)}'
+  constraints:
+    nodeTypes:
+      'Base.Theme:Content.FactsAndFigures.Item': true
+  properties:
+    backgroundColor:
+      defaultValue: 'slate-50'
+    headline:
+      options:
+        preset: 'text.headline'
+    text:
+      options:
+        preset: 'text.lead'

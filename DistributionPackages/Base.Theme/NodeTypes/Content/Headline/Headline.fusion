@@ -1,0 +1,16 @@
+prototype(Base.Theme:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    lead = Neos.Neos:Editable {
+        property = 'lead'
+        block = false
+    }
+
+    link = Base.Theme:Component.Link
+
+    renderer = afx`
+        <Base.Theme:Block.HeadlineAndLead {...props}/>
+    `
+}

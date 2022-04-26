@@ -1,0 +1,15 @@
+'Jonnitto.ImagesInARow:Container':
+  superTypes:
+    'Base.Theme:Mixin.Breakout': true
+  ui:
+    position: 300
+    inspector:
+      groups:
+        look:
+          label: 'Look & Feel'
+          icon: 'fas fa-paint-brush'
+  properties:
+    breakout:
+      ui:
+        label: Galeriebreite
+        showInCreationDialog: true

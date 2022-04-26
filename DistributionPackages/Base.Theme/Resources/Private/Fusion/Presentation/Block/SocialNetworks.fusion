@@ -1,0 +1,86 @@
+prototype(Base.Theme:Block.SocialNetworks) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        linkedin = ${PropTypes.string}
+        facebook = ${PropTypes.string}
+        instagram = ${PropTypes.string}
+        twitter = ${PropTypes.string}
+        youtube = ${PropTypes.string}
+        vimeo = ${PropTypes.string}
+        itemClass = ${PropTypes.anyOf(PropTypes.string, PropTypes.arrayOf(PropTypes.string))}
+        icon = ${PropTypes.boolean}
+        text = ${PropTypes.boolean}
+        plural = ${PropTypes.boolean}
+        networks = ${PropTypes.arrayOf(PropTypes.oneOf(['linkedin', 'facebook', 'instagram', 'twitter', 'youtube', 'vimeo', 'wikipedia', 'email', 'phone', 'mobile', 'website']))}
+    }
+    @styleguide {
+        props {
+            icon = true
+            text = false
+            class = 'block'
+            linkedin = 'https://linkedin.com'
+            facebook = 'https://facebook.com'
+            instagram = 'instagram.com'
+            twitter = 'Twitter.com'
+            youtube = 'https://youtube.com'
+            wikipedia = 'https://wikipedia.com'
+            vimeo = 'https://vimeo.com'
+            email = 'mail@example.dev'
+        }
+    }
+
+    networks = ${['linkedin', 'instagram', 'facebook', 'twitter', 'youtube', 'vimeo', 'wikipedia', 'email', 'phone', 'mobile']}
+    icon = true
+    text = false
+    tooltip = true
+    glue = ''
+    itemClass = 'text-slate-400 hover:text-slate-500'
+    wrapper = null
+    plural = true
+
+    @if.hasNetworksAndContent = ${Carbon.Array.check(this.networks) && (this.icon || this.text)}
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+        _items = Base.Theme:Helper.SocialNetworks {
+            @apply.props = ${props}
+        }
+        @if.hasNetwork = ${Carbon.Array.check(this._items)}
+        @process.convertUris = Neos.Neos:ConvertUris {
+            @if.set = ${!!node}
+            forceConversion = true
+        }
+
+        renderer = afx`
+            <Carbon.Eel:Tag
+                tagName={props.wrapper ? 'ul' : null}
+                attributes.class={Type.isString(props.wrapper) ? props.wrapper : null}
+                attributes.x-data={props.tooltip}
+                attributes.x-tooltips={props.tooltip}
+            >
+                <Neos.Fusion:Map
+                    items={props._items}
+                    @process.glue={Array.join(value, props.glue)}
+                >
+                    <Carbon.Eel:Tag tagName={props.wrapper ? 'li' : null}>
+                        <a
+                            href={item.href}
+                            class={props.itemClass}
+                            x-data={props.wrapper ? null : props.tooltip}
+                            x-tooltip={props.wrapper ? null : props.tooltip}
+                            aria-label={item.label}
+                        >
+                            <Base.Theme:Atom.Icon
+                                icon={props.icon ? item.network : null}
+                                class={props.iconClass}
+                                style='width:1em;height:1em'
+                            />
+                            <Carbon.Eel:Tag @if={props.text} tagName={props.icon ? 'span' : null}>
+                                {item.content}
+                            </Carbon.Eel:Tag>
+                        </a>
+                    </Carbon.Eel:Tag>
+                </Neos.Fusion:Map>
+            </Carbon.Eel:Tag>
+        `
+    }
+}

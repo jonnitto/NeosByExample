@@ -1,0 +1,45 @@
+prototype(Base.Theme:Document.Blog.Container.Ajax) < prototype(Neos.Fusion:Component) {
+    limit = ${request.arguments.limit || null}
+
+    renderer = Neos.Fusion:Component {
+        items = Neos.Fusion:Map {
+            items = ${q(documentNode).find('[instanceof Base.Theme:Document.Blog.Item]').sort('_hiddenBeforeDateTime', 'DESC').slice(0, props.limit)}
+            itemName = 'node'
+            itemRenderer = Base.Theme:Helper.Teaser.Data
+            @process.filter = ${Array.filter(value, item => !!item.image)}
+        }
+
+        renderer = Neos.Fusion:Http.Message {
+            httpResponseHead {
+                headers = Neos.Fusion:DataStructure {
+                    Content-Type = 'text/html'
+                }
+            }
+            content = afx`
+                <Neos.Fusion:Loop items={props.items}>
+                    <Base.Theme:Block.Teaser {...item} />
+                </Neos.Fusion:Loop>
+            `
+        }
+    }
+
+    @cache {
+        mode = 'dynamic'
+        entryIdentifier {
+            documentNode = ${documentNode}
+            ajax = 'ajax'
+        }
+        maximumLifetime = ${q(documentNode).context({'invisibleContentShown': true}).add(q(documentNode).find('[instanceof Base.Theme:Document.Blog.Item]')).cacheLifetime()}
+        entryDiscriminator = ${'limit' + request.arguments.limit}
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+            3 = 'site'
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(documentNode)}
+            2 = ${Neos.Caching.descendantOfTag(documentNode)}
+        }
+    }
+}
+

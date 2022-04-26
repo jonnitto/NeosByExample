@@ -1,0 +1,25 @@
+'Base.Theme:Content.Image':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.Image:AlternativeText': true
+    'Carbon.Image:Caption': true
+    'Carbon.Image:Image': true
+    'Carbon.Image:Lightbox': true
+    'Carbon.Image:Link': true
+    'Base.Theme:Mixin.Breakout': true
+    'Base.Theme:Mixin.TextWithContent': true
+    'Base.Theme:Mixin.TextWithContent.Position': true
+  label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text', 'alternativeText', 'caption')}"
+  ui:
+    position: 30
+  properties:
+    breakout:
+      ui:
+        inspector:
+          group: image
+          hidden: 'ClientEval:node.properties.enableText'
+          editorOptions:
+            values:
+              prose:
+                label: Restrict to text width
+                icon: file-alt

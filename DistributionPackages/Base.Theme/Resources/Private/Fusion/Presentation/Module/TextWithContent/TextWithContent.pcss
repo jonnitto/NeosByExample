@@ -1,0 +1,110 @@
+.-text-with-content {
+  --default-left: 27rem;
+  --default-right: 27rem;
+  --wide-left: 35rem;
+  --wide-right: 35rem;
+}
+
+.-text-with-content--33-66 {
+  --default-left: 17.5rem;
+  --default-right: 36.5rem;
+  --wide-left: 23rem;
+  --wide-right: 47rem;
+}
+
+.-text-with-content--66-33 {
+  --default-left: 36.5rem;
+  --default-right: 17.5rem;
+  --wide-left: 47rem;
+  --wide-right: 23rem;
+}
+
+.-text-with-content--25-75 {
+  --default-left: 13rem;
+  --default-right: 41rem;
+  --wide-left: 17rem;
+  --wide-right: 53rem;
+}
+
+.-text-with-content--75-25 {
+  --default-left: 41rem;
+  --default-right: 13rem;
+  --wide-left: 53rem;
+  --wide-right: 17rem;
+}
+
+@screen sm {
+  .-text-with-content--sm {
+    display: grid;
+
+    &.-text-with-content--right {
+      grid-template: ". content . text ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--default-left)) var(--content-padding) minmax(0, var(--default-right)) minmax(var(--content-padding), 1fr);
+    }
+
+    &.-text-with-content--left {
+      grid-template: ". text . content ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--default-left)) var(--content-padding) minmax(0, var(--default-right)) minmax(var(--content-padding), 1fr);
+    }
+
+    &.-text-with-content--wideright {
+      grid-template: ". content . text ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+    }
+
+    &.-text-with-content--wideleft {
+      grid-template: ". text . content ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+    }
+
+    &.-text-with-content--fullright {
+      grid-template: "content content . text ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+    }
+
+    &.-text-with-content--fullleft {
+      grid-template: ". text . content content" auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+    }
+
+    & .-text-with-content__text {
+      grid-area: text;
+    }
+
+    & .-text-with-content__content {
+      grid-area: content;
+    }
+  }
+}
+
+@screen md {
+  .-text-with-content {
+    display: grid;
+  }
+
+  .-text-with-content--right {
+    grid-template: ". content . text ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--default-left)) var(--content-padding) minmax(0, var(--default-right)) minmax(var(--content-padding), 1fr);
+  }
+
+  .-text-with-content--left {
+    grid-template: ". text . content ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--default-left)) var(--content-padding) minmax(0, var(--default-right)) minmax(var(--content-padding), 1fr);
+  }
+
+  .-text-with-content--wideright {
+    grid-template: ". content . text ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+  }
+
+  .-text-with-content--wideleft {
+    grid-template: ". text . content ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+  }
+
+  .-text-with-content--fullright {
+    grid-template: "content content . text ." auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+  }
+
+  .-text-with-content--fullleft {
+    grid-template: ". text . content content" auto / minmax(var(--content-padding), 1fr) minmax(0, var(--wide-left)) var(--content-padding) minmax(0, var(--wide-right)) minmax(var(--content-padding), 1fr);
+  }
+
+  .-text-with-content__text {
+    grid-area: text;
+  }
+
+  .-text-with-content__content {
+    grid-area: content;
+  }
+}

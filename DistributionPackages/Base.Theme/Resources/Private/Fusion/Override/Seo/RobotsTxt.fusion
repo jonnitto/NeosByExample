@@ -1,0 +1,7 @@
+prototype(Neos.Seo:RobotsTxt) {
+    data {
+        disallowPdf = 'Disallow: /*pdf$'
+        disallowDoc = 'Disallow: /*doc$'
+        disallowDocx = 'Disallow: /*docx$'
+    }
+}

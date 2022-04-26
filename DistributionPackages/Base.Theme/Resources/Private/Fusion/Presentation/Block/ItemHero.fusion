@@ -1,0 +1,30 @@
+prototype(Base.Theme:Block.ItemHero) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        date = ${PropTypes.any}
+        time = ${PropTypes.string}
+        backHref = ${PropTypes.string}
+        jsBack = ${PropTypes.boolean}
+    }
+
+    jsBack = true
+
+    renderer = afx`
+        <div class="pt-6 text-sm text-slate-500 -content">
+            <div class="grid grid-cols-2 gap-4">
+                <Neos.Fusion:Augmenter class="col-start-1">
+                    <Base.Theme:Block.BackButton
+                        href={props.backHref}
+                        jsBack={props.jsBack}
+                    />
+                </Neos.Fusion:Augmenter>
+                <div class="col-start-2 justify-self-end" @if={props.date || props.time}>
+                    <time @if={props.date} datetime={Date.format(props.date, 'Y-m-d')}>
+                        {Date.formatCldr(props.date, 'd. MMMM y')}
+                    </time>
+                    <span aria-hidden="true" @if={props.date && props.time}>&middot;</span>
+                    {props.time}
+                </div>
+            </div>
+        </div>
+    `
+}

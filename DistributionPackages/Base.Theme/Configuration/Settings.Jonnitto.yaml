@@ -1,0 +1,17 @@
+Jonnitto:
+  OutdatedBrowser:
+    disableForCrawler: false
+    lowerThan: ['Edge', 'grid-auto-flow']
+  ImagesInARow:
+    lazy: true
+  PrettyEmbedHelper:
+    enableGdprMessage: true
+    wrapper: 'jonnitto-prettyembed-wrapper px-safe'
+  PrettyEmbedVideoPlatforms:
+    defaults:
+      color: db2725
+  StadiaMaps:
+    defaultCountry: DE
+    aspectRatio: '16 / 9'
+    settings:
+      pinColor: '#26224C'

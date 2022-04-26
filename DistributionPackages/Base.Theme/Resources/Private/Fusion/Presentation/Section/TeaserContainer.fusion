@@ -1,0 +1,44 @@
+prototype(Base.Theme:Section.TeaserContainer) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        headline = ${PropTypes.string}
+        text = ${PropTypes.string}
+        moreHref = ${PropTypes.string}
+        moreText = ${PropTypes.string}
+        ajaxPath = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
+        content = ${PropTypes.string}
+    }
+    @styleguide {
+        props {
+            headline = 'Aktuelles & Beiträge'
+            text = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.'
+            moreHref = '#'
+            ajaxPath = ''
+            content = Sitegeist.Monocle:Preview.Prototypes {
+                items = 'Base.Theme:Block.Teaser,Base.Theme:Block.Teaser,Base.Theme:Block.Teaser'
+            }
+        }
+    }
+
+    ajaxPath = null
+    moreHref = null
+    moreText = 'Read more'
+    background = 'slate'
+    partialBackground = 'white'
+
+    renderer = afx`
+        <Base.Theme:Module.Section
+            background={props.background}
+            partialBackground={props.partialBackground}
+            headline={props.headline}
+            text={props.text}
+            xData={props.ajaxPath ? "fetch('" + Carbon.String.merge(props.ajaxPath) + "')" :  null}
+        >
+            <div x-ref={props.ajaxPath ? "target" : null} class="w-full mt-12 max-w-lg mx-auto flex flex-col gap-5 lg:flex-wrap lg:justify-center lg:flex-row lg:max-w-none">
+                {props.content}
+            </div>
+            <div @if={props.moreHref} class="text-center mt-8">
+                <a href={props.moreHref} class="hover:underline text-neos-light">{props.moreText}</a>
+            </div>
+        </Base.Theme:Module.Section>
+    `
+}

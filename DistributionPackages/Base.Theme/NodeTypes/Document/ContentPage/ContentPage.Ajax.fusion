@@ -1,0 +1,54 @@
+prototype(Base.Theme:Document.ContentPage.Ajax) < prototype(Neos.Fusion:Component) {
+    limit = ${request.arguments.limit || null}
+    # If this page or the subsite should be shown as teaser
+    single = ${request.arguments.single || false}
+    nodeType = 'Neos.Neos:Document'
+    node = ${documentNode}
+
+    @context.single = ${this.single}
+
+    renderer = Neos.Fusion:Component {
+        single = ${props.single}
+        items = Neos.Fusion:Map {
+            items = ${props.single ? [props.node] : q(props.node).children('[instanceof Neos.Neos:Document]').get()}
+            itemName = 'node'
+            itemRenderer = Base.Theme:Helper.Teaser.Data {
+                dateProperty = null
+            }
+            @process.filter = ${Array.filter(value, item => !!item.image)}
+        }
+
+        renderer = Neos.Fusion:Http.Message {
+            httpResponseHead {
+                headers = Neos.Fusion:DataStructure {
+                    Content-Type = 'text/html'
+                }
+            }
+            content = afx`
+                <Neos.Fusion:Loop items={props.items}>
+                    <Base.Theme:Block.Teaser {...item} />
+                </Neos.Fusion:Loop>
+            `
+        }
+    }
+
+    @cache {
+        mode = 'dynamic'
+        entryIdentifier {
+            documentNode = ${documentNode}
+            sub = ${single ? 'single' : 'sub'}
+            ajax = 'ajax'
+        }
+        maximumLifetime = ${single ? q(documentNode).cacheLifetime() : q(documentNode).children('[instanceof Neos.Neos:Document]').cacheLifetime()}
+        entryDiscriminator = ${('limit' + request.arguments.limit) + (single ? '-single' : '-sub')}
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+            3 = 'site'
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(documentNode)}
+            2 = ${single ? null : Neos.Caching.descendantOfTag(documentNode)}
+        }
+    }
+}

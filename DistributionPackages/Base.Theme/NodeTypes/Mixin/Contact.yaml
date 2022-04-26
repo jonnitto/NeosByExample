@@ -1,0 +1,111 @@
+'Base.Theme:Mixin.Contact':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        contact:
+          label: Contact
+          icon: paper-plane
+          position: 10
+        address:
+          label: Address
+          icon: map
+          position: 20
+        social:
+          label: 'Social networks'
+          icon: share-square
+          position: 30
+  properties:
+    mobile:
+      type: string
+      ui:
+        label: Cell phone
+        reloadIfChanged: true
+        inspector:
+          group: contact
+    phone:
+      type: string
+      ui:
+        label: Phone
+        reloadIfChanged: true
+        inspector:
+          group: contact
+    email:
+      type: string
+      ui:
+        label: Email
+        reloadIfChanged: true
+        inspector:
+          group: contact
+      validation:
+        # 'Neos.Neos/Validation/EmailAddressValidator': []
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[^A-Z]+$/'
+    socialLinkedin:
+      type: string
+      ui:
+        label: LinkedIn
+        reloadIfChanged: true
+        inspector:
+          group: social
+    socialFacebook:
+      type: string
+      ui:
+        label: Facebook
+        reloadIfChanged: true
+        inspector:
+          group: social
+    socialInstagram:
+      type: string
+      ui:
+        label: Instagram
+        reloadIfChanged: true
+        inspector:
+          group: social
+    socialTwitter:
+      type: string
+      ui:
+        label: Twitter
+        reloadIfChanged: true
+        inspector:
+          group: social
+    socialYoutube:
+      type: string
+      ui:
+        label: Youtube
+        reloadIfChanged: true
+        inspector:
+          group: social
+    socialVimeo:
+      type: string
+      ui:
+        label: Vimeo
+        reloadIfChanged: true
+        inspector:
+          group: social
+    socialWikipedia:
+      type: string
+      ui:
+        label: Wikipedia
+        reloadIfChanged: true
+        inspector:
+          group: social
+
+'Base.Theme:Mixin.Contact.Tab':
+  abstract: true
+  superTypes:
+    'Base.Theme:Mixin.Contact': true
+  ui:
+    inspector:
+      tabs:
+        contact:
+          label: Contact
+          icon: paper-plane
+          position: 10
+      groups:
+        contact:
+          tab: contact
+        address:
+          tab: contact
+        social:
+          tab: contact

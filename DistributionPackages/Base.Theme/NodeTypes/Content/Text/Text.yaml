@@ -1,0 +1,20 @@
+'Base.Theme:Content.Text':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.FirstElement:Mixin': true
+    'Base.Theme:Mixin.Link': true
+    'Base.Theme:Mixin.LinkAppearance': true
+  ui:
+    label: Text
+    icon: file-alt
+    position: 20
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    lead:
+      options:
+        preset: 'text.lead'
+    text:
+      options:
+        preset: 'text.autoparagraph'

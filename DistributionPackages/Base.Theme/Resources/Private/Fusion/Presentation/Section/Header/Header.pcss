@@ -1,0 +1,9 @@
+.-mobile-menu {
+  max-height: calc(var(--full-height, 100vh) - var(--header-height, 84px));
+}
+
+header.header + *,
+.-mobile-menu,
+.-header-mt {
+  margin-top: var(--header-height, 84px);
+}

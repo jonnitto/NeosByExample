@@ -1,0 +1,26 @@
+'Base.Theme:Mixin.LinkAppearance':
+  abstract: true
+  properties:
+    linkAppearance:
+      type: string
+      defaultValue: main
+      ui:
+        label: Appearance
+        reloadIfChanged: true
+        inspector:
+          position: 20
+          group: link
+          hidden: 'ClientEval:node.properties.linkHref ? false : true'
+          editor: 'Carbon.ColorValues/Editor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              main:
+                label: Dark blue
+                color: '#26224C'
+              minor:
+                label: Light blue
+                color: '#00ADEE'
+              ghost:
+                label: Ghost button
+                color: '#ffffff'

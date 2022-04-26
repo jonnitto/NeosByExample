@@ -1,0 +1,14 @@
+prototype(Neos.Neos:Page) {
+    htmlTag.attributes {
+        data-context = ${Configuration.setting('Neos.Flow.core.context')}
+        class = Neos.Fusion:DataStructure {
+            neosContext = ${node.context.live ? '-live' : '-backend'}
+            noJS = '-nojs'
+        }
+    }
+    lastVisitedNodeScript >
+    body.@process {
+        emptyClass = ${String.replace(value, ' class=""', '')}
+        emptyStyle = ${String.replace(value, ' style=""', '')}
+    }
+}

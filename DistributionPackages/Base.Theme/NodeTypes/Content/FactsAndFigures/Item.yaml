@@ -1,0 +1,32 @@
+'Base.Theme:Content.FactsAndFigures.Item':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Base.Theme:Constraint.Content.Restricted': true
+  ui:
+    label: 'Fact & Figure'
+    icon: stopwatch-20
+    inspector:
+      groups:
+        settings:
+          label: Einstellungen
+          position: 5
+          icon: stopwatch-20
+  properties:
+    headline:
+      type: string
+      ui:
+        label: Headline
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          position: 10
+          group: settings
+    text:
+      type: string
+      ui:
+        label: Text
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          position: 20
+          group: settings

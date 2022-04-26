@@ -1,0 +1,20 @@
+prototype(Base.Theme:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+    content = Neos.Neos:Editable {
+        property = 'text'
+    }
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    lead = Neos.Neos:Editable {
+        property = 'lead'
+        block = false
+    }
+
+    link = Base.Theme:Component.Link
+
+    renderer = afx`
+        <Base.Theme:Block.Text {...props}/>
+        <Neos.Fusion:Debug.Console link={props.link} />
+    `
+}

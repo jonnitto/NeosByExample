@@ -1,0 +1,24 @@
+'Base.Theme:Mixin.Article.Limit':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: Settings
+          icon: paint-brush
+  properties:
+    limit:
+      type: integer
+      defaultValue: 3
+      ui:
+        label: 'Quantity articles'
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          editor: 'Neos.Neos/Inspector/Editors/RangeEditor'
+          editorOptions:
+            min: 3
+            max: 15
+            step: 3
+            unit: ' articles'

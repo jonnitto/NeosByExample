@@ -1,0 +1,84 @@
+##
+# Document NodeType for Homepages
+#
+##
+
+'Base.Theme:Document.HomePage':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Constraint.Document.Restricted': true
+    'Base.Theme:Mixin.Contact.Tab': true
+  ui:
+    label: Homepage
+    icon: globe
+    inspector:
+      groups:
+        footer:
+          label: Fußzeile
+          icon: bars
+          position: end
+  constraints:
+    nodeTypes:
+      'Base.Theme:Document.NotFound': true
+      'Base.Theme:Document.DataPrivacy': true
+      'Base.Theme:Document.Blog.Container': true
+      'Base.Theme:Document.Reference.Container': true
+      'Base.Theme:Document.Search': true
+      'Content.Templates:Document.Container': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+    imprint:
+      type: 'Base.Theme:Document.Meta'
+    privacy:
+      type: 'Base.Theme:Document.DataPrivacy'
+      position: 'after imprint'
+    notfound:
+      type: 'Base.Theme:Document.NotFound'
+      position: 'after privacy'
+  properties:
+    uriPathSegment:
+      defaultValue: index
+      ui:
+        inspector:
+          hidden: true
+    footerTitle1:
+      type: string
+      ui:
+        label: 'Titel erste Spalte'
+        reloadPageIfChanged: true
+        inspector:
+          group: footer
+          position: 10
+    footerNavigation1:
+      type: references
+      ui:
+        label: 'Seiten erste Spalte'
+        inspector:
+          group: footer
+          position: 20
+          reloadPageIfChanged: true
+          editorOptions:
+            nodeTypes:
+              - 'Base.Theme:Mixin.AbstractPage'
+              - 'Neos.Neos:Shortcut'
+    footerTitle2:
+      type: string
+      ui:
+        label: 'Titel zweite Spalte'
+        reloadPageIfChanged: true
+        inspector:
+          group: footer
+          position: 30
+    footerNavigation2:
+      type: references
+      ui:
+        label: 'Seiten zweite Spalte'
+        inspector:
+          group: footer
+          position: 40
+          reloadPageIfChanged: true
+          editorOptions:
+            nodeTypes:
+              - 'Base.Theme:Mixin.AbstractPage'
+              - 'Neos.Neos:Shortcut'

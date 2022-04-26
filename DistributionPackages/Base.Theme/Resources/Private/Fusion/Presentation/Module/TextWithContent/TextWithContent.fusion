@@ -1,0 +1,114 @@
+prototype(Base.Theme:Module.TextWithContent) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        headline = ${PropTypes.string}
+        breakout = ${PropTypes.oneOf(['', 'wide', 'full'])}
+        padding = ${PropTypes.boolean}
+        textLeft = ${PropTypes.boolean}
+        backgroundColor = ${PropTypes.string}
+        linkHref = ${PropTypes.string}
+        linkText = ${PropTypes.string}
+        linkAppearance = ${PropTypes.string}
+        align = ${PropTypes.oneOf(['stretch', 'start', 'center', 'end', 'baseline']).isRequired}
+        ratio = ${PropTypes.oneOf(['', '50-50', '33-66', '66-33', '25-75' , '75-25'])}
+        breakpoint = ${PropTypes.oneOf(['sm', 'md'])}
+    }
+
+    @styleguide {
+        props {
+            headline = 'Headline'
+            breakout = 'wide'
+            textLeft = false
+            backgroundColor = 'light'
+            text = 'Das hier ist der nützlichste und klügste Blindtext der ganzen Welt, weil er dir genau sagt, wann 100 Zeichen vorbei sind (gleich nach der Zahl).'
+            linkHref = '#'
+            linkText = 'mehr'
+            linkAppearance = 'main'
+            align = 'center'
+            ratio = '50-50'
+            content = Carbon.Image:Component.Presentation.Image {
+                imageSource = Carbon.Image:Helper.ImageSource {
+                    outputDummy = true
+                }
+            }
+        }
+    }
+
+    breakout = null
+    padding = false
+    aside = null
+    textLeft = false
+    backgroundColor = null
+    align = 'center'
+    ratio = null
+    breakpoint = 'md'
+    activateNodeUpdate = false
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+
+        _alignClasses = Neos.Fusion:DataStructure {
+            stretch = 'items-stretch'
+            start = 'items-start'
+            center = 'items-center'
+            end = 'items-end'
+            baseline = 'items-baseline'
+        }
+        _bgHelper = Base.Theme:Helper.BackgroundColor {
+            @if.set = ${props.backgroundColor}
+            backgroundColor = ${props.backgroundColor}
+        }
+
+        renderer = Neos.Fusion:Component {
+            @apply.props = ${props}
+
+            _wrappingClassForTextWithContent = Base.Theme:Helper.BreakoutClass {
+                breakout = 'full'
+                padding = ${props.padding}
+                value = Neos.Fusion:DataStructure {
+                    bem = ${BEM.modifier('-text-with-content', [props.breakpoint, props.breakout + (props.textLeft ? 'left' : 'right'), props.ratio, props._bgHelper.hasBackgroud ? 'bg' : null])}
+                    default = 'space-y-8 px-safe'
+                    breakpoint = ${props.breakpoint == 'md' ? 'md:space-y-0' : 'sm:space-y-0' }
+                    align = ${props._alignClasses[props.align]}
+                    bg = ${props._bgHelper.class}
+                    bgColor = ${props.backgroundColor ? 'py-12' : null}
+                }
+            }
+            renderer = afx`
+                <div
+                    class={props._wrappingClassForTextWithContent}
+                    x-data={props.activateNodeUpdate}
+                    "x-on:neosnodeupdate.window"={props.activateNodeUpdate ? 'liveUpdate.textWidthContent($root, $event.detail, $refs)' : null}
+                >
+                    <div class={["-text-with-content__text flex flex-col", props.padding ? null : "px-8 ", props.breakpoint == "md" ? "md:px-0" : "sm:px-0"]}>
+                        <Base.Theme:Atom.Headline
+                            content={props.headline}
+                            isFirstElement={props.isFirstElement}
+                            class="text-3xl sm:text-4xl font-medium mb-4"
+                        />
+                        <div
+                            @if={props.text}
+                            class.base="prose prose-lg" 
+                            class.invert={props._bgHelper.dark ? "prose-invert" : null}
+                        >
+                            {props.text}
+                        </div>
+                        <div @if={props.linkHref} class="-mx-1 mt-4 flex">
+                            <Base.Theme:Atom.Link
+                                appearance={props.linkAppearance}
+                                dark={props._bgHelper.dark}
+                                href={props.linkHref}
+                                content={props.linkText}
+                                class="mx-1 mt-2"
+                                x-ref="button"
+                            />
+                        </div>
+                        {props.aside}
+                    </div>
+                    <Neos.Fusion:Augmenter class="-text-with-content__content">
+                        {props.content}
+                    </Neos.Fusion:Augmenter>
+                </div>
+            `
+        }
+    }
+}

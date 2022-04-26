@@ -1,0 +1,34 @@
+prototype(Base.Theme:Document.Blog.Container) < prototype(Base.Theme:Document.AbstractPage) {
+    content = Neos.Neos:ContentComponent {
+
+        items = Neos.Fusion:Map {
+            items = ${q(documentNode).find('[instanceof Base.Theme:Document.Blog.Item]').sort('_hiddenBeforeDateTime', 'DESC')}
+            itemName = 'node'
+            itemRenderer = Base.Theme:Helper.Teaser.Data
+            @process.filter = ${Array.filter(value, item => !!item.image)}
+        }
+        headline = Neos.Neos:Editable {
+            property = 'headline'
+            block = false
+        }
+        lead = Neos.Neos:Editable {
+            property = 'lead'
+            block = false
+        }
+        isFirstElement = true
+
+        renderer = afx`
+            <main class="-content -breakout -main">
+                <Base.Theme:Block.HeadlineAndLead {...props} />
+                <div
+                    @if={Carbon.Array.check(props.items)}
+                    class="w-full mt-12 max-w-lg mx-auto flex flex-col gap-5 lg:flex-wrap lg:justify-center lg:flex-row lg:max-w-none"
+                >
+                    <Neos.Fusion:Loop items={props.items}>
+                        <Base.Theme:Block.Teaser {...item} />
+                    </Neos.Fusion:Loop>
+                </div>
+            </main>
+        `
+    }
+}

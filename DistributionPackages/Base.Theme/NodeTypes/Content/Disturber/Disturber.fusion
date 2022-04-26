@@ -1,0 +1,32 @@
+prototype(Base.Theme:Content.Disturber) < prototype(Neos.Neos:ContentComponent) {
+    image = ${q(node).property('image')}
+    opacity = ${q(node).property('opacity')}
+    textDark = ${q(node).property('textDark')}
+    linkHref = ${q(node).property('linkHref')}
+    linkText = ${q(node).property('linkText')}
+    linkAppearance = ${q(node).property('linkAppearance') || 'ghost'}
+    dotsOpacity = ${q(node).property('dotsOpacity')}
+    backgroundColor = ${q(node).property('backgroundColor')}
+
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    lead = Neos.Neos:Editable {
+        property = 'lead'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = false
+    }
+
+    inBackend = ${node.context.inBackend}
+    activateNodeUpdate = ${this.inBackend}
+    alwaysRenderDots = ${this.inBackend}
+
+    integration = true
+    minHeight = '40vh'
+
+    renderer = afx`<Base.Theme:Module.Disturber {...props} />`
+}

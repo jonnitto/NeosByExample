@@ -1,0 +1,8 @@
+'Base.Theme:Mixin.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Seite
+    icon: file
+    position: 100

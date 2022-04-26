@@ -1,0 +1,3 @@
+prototype(Neos.Fusion:Augmenter) {
+    class.@process.allowArrays = ${Carbon.String.merge(value)}
+}

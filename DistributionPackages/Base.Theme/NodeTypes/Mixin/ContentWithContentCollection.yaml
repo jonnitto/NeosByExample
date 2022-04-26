@@ -1,0 +1,9 @@
+'Base.Theme:Mixin.ContentWithContentCollection':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text').postfix(' ' + I18n.translate('contentcollection.label', '', [q(node).children().count()], 'Main', 'Base.Theme', q(node).children().count()))}"
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Content': false

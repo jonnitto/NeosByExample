@@ -1,0 +1,38 @@
+'Base.Theme:Mixin.TextWithContent.Plain':
+  abstract: true
+  superTypes:
+    'Base.Theme:Mixin.Breakout': true
+    'Base.Theme:Mixin.BackgroundColor': true
+    'Base.Theme:Mixin.Link': true
+    'Base.Theme:Mixin.LinkAppearance': true
+  ui:
+    inspector:
+      groups:
+        look:
+          label: 'Look & Feel'
+          icon: paint-brush
+          position: 200
+        headline:
+          position: 210
+        link:
+          position: 220
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    text:
+      options:
+        preset: 'text.autoparagraph'
+    breakout:
+      ui:
+        inspector:
+          group: look
+          positon: 10
+    backgroundColor:
+      ui:
+        inspector:
+          group: look
+          position: 540
+          hidden: 'ClientEval:!!node.parent.match("\/content@")'
+          editorOptions:
+            allowEmpty: true

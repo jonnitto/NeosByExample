@@ -1,0 +1,1 @@
+prototype(Base.Theme:Document.Blog.Year) < prototype(Base.Theme:Document.Blog.Container) 

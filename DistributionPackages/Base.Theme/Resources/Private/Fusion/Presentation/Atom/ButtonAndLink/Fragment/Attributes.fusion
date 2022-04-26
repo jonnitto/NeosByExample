@@ -1,0 +1,21 @@
+prototype(Base.Theme:Atom.ButtonAndLink.Fragment.Attributes) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        appearance = ${PropTypes.oneOf(['main', 'minor', 'ghost', 'link'])}
+        bigArea = ${PropTypes.boolean}
+        dark = ${PropTypes.boolean}
+        inline = ${PropTypes.boolean}
+    }
+
+    appearance = 'minor'
+    bigArea = false
+    inline = true
+    dark = false
+
+    renderer = afx`
+        <Neos.Fusion:DataStructure
+            @ignoreProperties={['content', 'appearance', 'dark', 'bigArea', 'inline']}
+            {...props}
+            class={Carbon.String.merge(props.class, BEM.modifier('btn', {apperance: props.appearance, dark: props.dark, inline: props.inline}))}
+        />
+    `
+}

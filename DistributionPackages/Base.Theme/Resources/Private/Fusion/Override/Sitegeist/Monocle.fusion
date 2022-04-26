@@ -1,0 +1,57 @@
+prototype(Sitegeist.Monocle:Preview.Page) {
+    @context {
+        isMaizzle = ${String.startsWith(prototypeName, 'Base.Maizzle:')}
+        includePhotoSwipe = false
+    }
+    htmlTag.attributes.class = '-monocle -live -nojs'
+    bodyTag.attributes.class = '-content'
+
+    prototype(Jonnitto.PhotoSwipe:IncludeCase) {
+        @if.set = ${!isMaizzle && includePhotoSwipe}
+        alwaysInclude = true
+    }
+
+    carbonIncludeAssetsHeadStart = Carbon.IncludeAssets:MonocleAssets {
+        @if.set = ${!isMaizzle}
+        @position = 'before head'
+        location = 'HeadStart'
+    }
+
+    carbonIncludeAssetsHead = Carbon.IncludeAssets:MonocleAssets {
+        @if.set = ${!isMaizzle}
+        @position = 'before closingHeadTag'
+        location = 'Head'
+    }
+
+    carbonIncludeAssetsBodyStart = Carbon.IncludeAssets:MonocleAssets {
+        @if.set = ${!isMaizzle}
+        @position = 'before body'
+        location = 'BodyStart'
+    }
+
+    carbonIncludeAssetsBody = Carbon.IncludeAssets:MonocleAssets {
+        @if.set = ${!isMaizzle}
+        @position = 'before closingBodyTag'
+        location = 'Body'
+    }
+
+    photoswipeMarkup = Jonnitto.PhotoSwipe:Markup {
+        @if.set = ${!isMaizzle includePhotoSwipe}
+        @position = 'before closingBodyTag'
+    }
+    body.@process {
+        emptyClass = ${String.replace(value, ' class=""', '')}
+        emptyStyle = ${String.replace(value, ' style=""', '')}
+    }
+}
+
+prototype(Sitegeist.Monocle:Preview.Prototypes) < prototype(Neos.Fusion:Component) {
+    items = ''
+    renderer = Neos.Fusion:Loop {
+        items = ${String.split(props.items, ',')}
+        itemRenderer = Sitegeist.Monocle:Preview.Prototype {
+            prototypeName = ${item}
+        }
+    }
+}
+

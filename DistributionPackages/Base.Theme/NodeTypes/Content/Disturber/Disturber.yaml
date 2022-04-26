@@ -1,0 +1,84 @@
+'Base.Theme:Content.Disturber':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.Image:Image': true
+    'Base.Theme:Mixin.BackgroundColor': true
+    'Base.Theme:Mixin.Link': true
+    'Base.Theme:Mixin.LinkAppearance': true
+  ui:
+    label: 'Disturber / Call to Action'
+    icon: bullhorn
+    group: teaser
+    inspector:
+      groups:
+        settings:
+          label: Settings
+          position: 5
+          icon: paint-brush
+        image:
+          label: Background
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    lead:
+      options:
+        preset: 'text.lead'
+    text:
+      options:
+        preset: 'text.pure'
+    dotsOpacity:
+      type: integer
+      defaultValue: 10
+      ui:
+        label: 'Background dots'
+        inspector:
+          group: image
+          position: 1
+          editor: 'Neos.Neos/Inspector/Editors/RangeEditor'
+          editorOptions:
+            min: 0
+            max: 100
+            step: 1
+            unit: '%'
+    textDark:
+      type: boolean
+      ui:
+        label: 'Dark text'
+        inspector:
+          group: image
+          position: 2
+          hidden: 'ClientEval:node.properties.image ? false : true'
+    backgroundColor:
+      defaultValue: neos-dark
+      ui:
+        label: Background color
+        inspector:
+          group: image
+          position: 3
+          hidden: 'ClientEval:node.properties.image ? true : false'
+          editorOptions:
+            allowEmpty: false
+    opacity:
+      type: integer
+      defaultValue: 40
+      ui:
+        label: 'Soften image'
+        inspector:
+          group: image
+          hidden: 'ClientEval:node.properties.image ? false : true'
+          position: 'after image'
+          editor: 'Neos.Neos/Inspector/Editors/RangeEditor'
+          editorOptions:
+            minLabel: 'Durchsichtig'
+            min: 0
+            max: 90
+            step: 1
+            unit: '%'
+    linkText:
+      ui:
+        inspector:
+          editorOptions:
+            placeholder: 'read more'
+    linkAppearance:
+      defaultValue: ghost

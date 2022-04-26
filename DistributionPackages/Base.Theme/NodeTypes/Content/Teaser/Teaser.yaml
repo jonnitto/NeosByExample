@@ -1,0 +1,38 @@
+'Base.Theme:Content.Teaser':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Teaser
+    group: teaser
+    icon: images
+    position: 150
+    inspector:
+      groups:
+        settings:
+          label: Einstellungen
+          icon: paint-brush
+  properties:
+    headline:
+      options:
+        preset: text.headline
+    text:
+      options:
+        preset: text.lead
+    subsites:
+      type: boolean
+      ui:
+        label: Gebe Unterseiten der Seite aus
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 10
+    nodes:
+      type: references
+      ui:
+        label: Seiten
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 20

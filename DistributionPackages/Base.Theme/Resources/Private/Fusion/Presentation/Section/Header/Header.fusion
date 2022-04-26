@@ -1,0 +1,92 @@
+prototype(Base.Theme:Section.Header) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            homeUri = '#'
+            items = Neos.Fusion:DataStructure {
+                01 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Architektur'
+                }
+                02 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Manufaktur'
+                    subItems = ${['Neuanlagen', 'Natursteinarbeiten', 'Wasser im Garten', 'Holzbau', 'Stahlbau', 'Bepflanzungen']}
+                }
+                03 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Pflege'
+                    subItems = ${['Rasenpflege', 'Winterschnitt', 'Rabattenpflege']}
+                }
+                04 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Ausstattungen'
+                    subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
+                }
+                05 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Referenzen'
+                    // subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
+                }
+                06 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Tagebuch'
+                    // subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
+                }
+                07 = Base.Theme:Section.Header.Fixture.MenuItem {
+                    label = 'Über uns'
+                    // subItems = ${['Feuerring', 'Brunnen und Wasserspiele', 'Gartenmöbel']}
+                }
+            }
+        }
+    }
+
+    homeUri = '/'
+    items = Neos.Fusion:DataStructure
+
+    renderer = afx`
+        <header
+            class="header mt-0 z-50 fixed inset-x-0 top-0 bg-white transition-transform transform-gpu duration-500"
+            x-bind="header"
+            x-data="header"
+        >
+            <div class="shadow px-safe" x-ref="header">
+                <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 lg:justify-start lg:space-x-10">
+                    <nav class="hidden lg:flex self-stretch flex-1 items-stretch justify-between lg:space-x-6 lg:justify-start">
+                        <Neos.Fusion:Loop items={props.items} @if={Carbon.Array.check(props.items)}>
+                            <Base.Theme:Section.Header.Fragment.MenuItem {...item}/>
+                        </Neos.Fusion:Loop>
+                    </nav>
+                    <Base.Theme:Atom.Logo href={props.homeUri}/>
+                    <div class="-mr-2 -my-2 lg:hidden" @if={Carbon.Array.check(props.items)}>
+                        <button
+                            x-on:click="mobileMenuOpen=!mobileMenuOpen"
+                            type="button"
+                            class="bg-white rounded-none p-2 inline-flex items-center justify-center text-minor-light hover:text-minor border-transparent border-2 hover:border-minor focus:border-minor focus:outline-none transition-colors"
+                        >
+                            <span class="sr-only font-light sm:not-sr-only sm:pr-4 sm:block">
+                                <span :class="mobileMenuOpen&&'hidden'">{Translation.translate('navigation.open', 'Open menu', [], null, 'Base.Theme')}</span>
+                                <span :class="mobileMenuOpen||'hidden'">{Translation.translate('navigation.close', 'Close menu', [], null, 'Base.Theme')}</span>
+                            </span>
+                            <svg class="h-6 w-6" :class="mobileMenuOpen&&'hidden'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                <path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <Base.Theme:Atom.Icon icon="close" class="h-6 w-6" :class="mobileMenuOpen||'hidden'" />
+                        </button>
+                    </div>
+                </div>
+                <nav
+                    @if={Carbon.Array.check(props.items)}
+                    x-cloak
+                    x-transition
+                    x-show="mobileMenuOpen"
+                    "x-trap"="mobileMenuOpen"
+                    class="-mobile-menu bg-white shadow px-safe overscroll-contain overflow-auto absolute z-20 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden"
+                >
+                    <ul class="p-4 grid grid-flow-row grid-cols-1 sm:grid-cols-2 gap-4">
+                        <Neos.Fusion:Loop items={props.items}>
+                            <Base.Theme:Section.Header.Fragment.MobileMenuItem {...item}/>
+                        </Neos.Fusion:Loop>
+                    </ul>
+                </nav>
+            </div>
+            <template x-teleport="body">
+                <div x-show="mobileMenuOpen||dropdown" "x-transition.opacity" x-on:click="mobileMenuOpen=false;dropdown=false" aria-hidden="true" class="fixed inset-0 bg-white/80 z-10"></div>
+            </template>
+        </header>
+    `
+}

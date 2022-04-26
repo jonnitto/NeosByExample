@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "DistributionPackages/Base.Theme",
-                "reference": "434f926570435c1b606beb1c10272a4f25d1b256"
+                "reference": "dd5927024d3e8aaf897305ad2b026682451510f2"
             },
             "require": {
                 "carbon/colorvalues": "^1.0.0",
@@ -35,7 +35,6 @@
                 "neos/seo": "^3.2",
                 "packagefactory/atomicfusion-proptypes": "^2.0",
                 "punktde/archivist": "^2.8.0",
-                "sitegeist/archaeopteryx": "^1.0",
                 "sitegeist/klarschiff": "^3.0",
                 "sitegeist/monocle": "^7.1",
                 "sitegeist/monocle-backstopjs": "^1.1",
@@ -7378,66 +7377,6 @@
             "time": "2021-12-10T11:20:11+00:00"
         },
         {
-            "name": "sitegeist/archaeopteryx",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sitegeist/Sitegeist.Archaeopteryx.git",
-                "reference": "5c95816851ca09b15e2ca0edb646356159f71c97"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Archaeopteryx/zipball/5c95816851ca09b15e2ca0edb646356159f71c97",
-                "reference": "5c95816851ca09b15e2ca0edb646356159f71c97",
-                "shasum": ""
-            },
-            "require": {
-                "neos/neos": "^5.3 || ^7.0 || ^8.0 || dev-master"
-            },
-            "require-dev": {
-                "jangregor/phpstan-prophecy": "^0.8.0",
-                "mikey179/vfsstream": "^1.6",
-                "neos/buildessentials": "^6.3",
-                "phpstan/phpstan": "^0.12.82",
-                "phpunit/phpunit": "^9.4",
-                "spatie/phpunit-snapshot-assertions": "^4.2",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "neos-plugin",
-            "extra": {
-                "neos": {
-                    "package-key": "Sitegeist.Archaeopteryx"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sitegeist\\Archaeopteryx\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Martin Ficzel",
-                    "email": "ficzel@sitegeist.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Wilhelm Behncke",
-                    "email": "behncke@sitegeist.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The missing link editor for Neos",
-            "support": {
-                "issues": "https://github.com/sitegeist/Sitegeist.Archaeopteryx/issues",
-                "source": "https://github.com/sitegeist/Sitegeist.Archaeopteryx/tree/1.0.1"
-            },
-            "time": "2022-04-01T11:44:29+00:00"
-        },
-        {
             "name": "sitegeist/kaleidoscope",
             "version": "v6.4.0",
             "source": {
@@ -9450,16 +9389,16 @@
     "packages-dev": [
         {
             "name": "carbon/pipeline",
-            "version": "0.10.5",
+            "version": "0.10.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPackages/Carbon.Pipeline.git",
-                "reference": "3ca4343ddea500d65aac0e2a97577055fc8e64bb"
+                "reference": "c711bb75468a914acf7cd771900551a3a0635589"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Pipeline/zipball/3ca4343ddea500d65aac0e2a97577055fc8e64bb",
-                "reference": "3ca4343ddea500d65aac0e2a97577055fc8e64bb",
+                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Pipeline/zipball/c711bb75468a914acf7cd771900551a3a0635589",
+                "reference": "c711bb75468a914acf7cd771900551a3a0635589",
                 "shasum": ""
             },
             "type": "neos-build",
@@ -9498,7 +9437,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPackages/Carbon.Pipeline/issues",
-                "source": "https://github.com/CarbonPackages/Carbon.Pipeline/tree/0.10.5"
+                "source": "https://github.com/CarbonPackages/Carbon.Pipeline/tree/0.10.6"
             },
             "funding": [
                 {
@@ -9510,7 +9449,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-22T12:39:27+00:00"
+            "time": "2022-04-26T10:11:23+00:00"
         },
         {
             "name": "shel/neos-logs",

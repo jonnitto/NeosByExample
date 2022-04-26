@@ -1,0 +1,20 @@
+##
+# Error matcher to render the 'notfound' child-document of the homepage
+# for exceptions with 4xx status code
+#
+
+error {
+    4xx {
+        @context.notfoundDocument = ${q(site).children('[instanceof Base.Theme:Document.NotFound]').get(0)}
+        @position = 'start'
+        condition = ${statusCode >= 400 && statusCode < 500 && notfoundDocument}
+        renderer = Neos.Fusion:Renderer {
+            @context {
+                site = ${site}
+                node = ${notfoundDocument}
+                documentNode = ${notfoundDocument}
+            }
+            renderPath = '/root'
+        }
+    }
+}

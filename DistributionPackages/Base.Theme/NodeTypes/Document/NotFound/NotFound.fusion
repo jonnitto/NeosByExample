@@ -1,0 +1,9 @@
+prototype(Base.Theme:Document.NotFound) < prototype(Base.Theme:Document.AbstractPage) {
+    prototype(Neos.Neos:Page) {
+        httpResponseHead {
+            statusCode = 404
+        }
+    }
+
+    content = Base.Theme:ContentCollection
+}

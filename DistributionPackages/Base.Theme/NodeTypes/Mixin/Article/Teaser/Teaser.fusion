@@ -1,0 +1,34 @@
+prototype(Base.Theme:Component.Article.Teaser) < prototype(Neos.Neos:ContentComponent) {
+    limit = ${q(node).property('limit')}
+    rootNode = ${q(node).property('rootNode')}
+    moreText = ${q(node).property('moreText') || q(this.rootNode).property('moreText') || 'Read more'}
+
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = false
+    }
+
+    renderer = Base.Theme:Section.TeaserContainer {
+        @apply.props = ${props}
+        moreHref = Neos.Neos:NodeUri {
+            node = ${props.rootNode}
+        }
+        ajaxPath = Neos.Neos:NodeUri {
+            node = ${props.rootNode}
+            additionalParams {
+                ajax = true
+                limit = ${props.limit}
+            }
+        }
+        content = Neos.Fusion:Loop {
+            items = ${Array.range(1, props.limit)}
+            itemRenderer = Base.Theme:Block.Teaser {
+                placeholder = true
+            }
+        }
+    }
+}

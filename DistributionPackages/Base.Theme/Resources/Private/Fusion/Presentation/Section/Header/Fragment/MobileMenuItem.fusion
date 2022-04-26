@@ -1,0 +1,40 @@
+prototype(Base.Theme:Section.Header.Fragment.MobileMenuItem) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        href = ${PropTypes.string.isRequired}
+        label = ${PropTypes.string.isRequired}
+        uriPathSegment = ${PropTypes.string}
+        content = ${PropTypes.string}
+    }
+
+    href = null
+    label = null
+    uriPathSegment = ${Array.last(String.split(this.href, '/'))}
+    content = null
+    subItems = null
+
+    @if.hasLabelAndHref = ${this.href && this.label}
+
+    defaultClass = Neos.Fusion:DataStructure {
+        base = 'block leading-tight focus:outline-none focus-visible:ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neos-light'
+        1 = ${this.base + ' text-2xl py-2 my-2 text-slate-900 hover:text-neos-dark'}
+        2 = ${this.base + ' text-base py-2 text-slate-900 hover:text-neos-dark'}
+        3 = ${this.base + ' text-base py-2 text-slate-900 hover:text-neos-dark'}
+    }
+
+
+    renderer = afx`
+        <li class={props.subItems ? 'sm:col-span-2' : null}>
+            <a
+                href={props.href}
+                class={props.defaultClass[props.menuLevel]}
+            >
+                {props.label}
+            </a>
+            <ul @if={props.subItems} class='grid grid-flow-row grid-cols-1 sm:grid-cols-2 gap-x-4'>
+                <Neos.Fusion:Loop items={props.subItems}>
+                    <Base.Theme:Section.Header.Fragment.MobileMenuItem {...item} />
+                </Neos.Fusion:Loop>
+            </ul>
+        </li>
+    `
+}

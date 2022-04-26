@@ -1,0 +1,14 @@
+'Base.Theme:Content.Blog.Teaser':
+  superTypes:
+    'Base.Theme:Mixin.Article.Teaser': true
+  ui:
+    label: 'Newest Article'
+    icon: newspaper
+  properties:
+    rootNode:
+      ui:
+        label: Source of the articles
+        inspector:
+          editorOptions:
+            dataSourceAdditionalData:
+              nodeTypes: ['Base.Theme:Document.Blog.Container']

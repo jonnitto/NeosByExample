@@ -1,0 +1,89 @@
+prototype(Base.Theme:Module.Section) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        headline = ${PropTypes.string}
+        text = ${PropTypes.string}
+        content = ${PropTypes.string}
+        xData = ${PropTypes.string}
+        partialBackground = ${PropTypes.oneOf(['slate', 'light', 'dark', 'white'])}
+        background = ${PropTypes.oneOf(['slate', 'light', 'dark'])}
+    }
+
+    @styleguide {
+        props {
+            headline = 'Headline'
+            text = 'Sub-Headline'
+            content = 'Content'
+            background = 'slate'
+            partialBackground = true
+        }
+    }
+
+    partialBackground = null
+    partialBackground.@process.set = ${this.background ? value : null}
+    xData = null
+
+    @if.hasContent = ${this.content}
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+        _sectionClasses = Neos.Fusion:DataStructure {
+            content = Base.Theme:Helper.BreakoutClass {
+                padding = false
+                breakout = 'full'
+                content = true
+            }
+            background = Neos.Fusion:Match {
+                @if.set = ${props.background}
+                @subject = ${props.background}
+                slate = 'bg-slate-50'
+                dark = 'bg-neos-dark'
+                light = 'bg-neos-light'
+            }
+            padding = ${props.partialBackground ? "relative pb-20" : "pt-12 sm:pt-16"}
+        }
+        _partialBackground = Neos.Fusion:Match {
+            @subject = ${props.partialBackground}
+            white = 'bg-white'
+            slate = 'bg-slate-50'
+            dark = 'bg-neos-dark'
+            light = 'bg-neos-light'
+        }
+
+        _full = Base.Theme:Helper.BreakoutClass {
+            padding = false
+            breakout = 'full'
+        }
+
+        _widePadding = Base.Theme:Helper.BreakoutClass {
+            padding = true
+            breakout = 'wide'
+        }
+
+        _hasHeadlineOrText = ${props.headline || props.text}
+
+        renderer = afx`
+            <section x-data={props.xData} class={props._sectionClasses}>
+                <div @if={props.partialBackground} class={["absolute top-0 bottom-0", props._full]}
+                     aria-hidden="true">
+                    <div class={[props._partialBackground, "h-1/3 sm:h-2/3"]}></div>
+                </div>
+                <div @if={props._hasHeadlineOrText || props.partialBackground}
+                     class={[props.partialBackground ? "relative" : null, props._widePadding]}>
+                    <div class="text-center" @if={props._hasHeadlineOrText}>
+                        <h2 
+                            @if={props.headline}
+                            class="text-3xl font-medium text-slate-900 sm:text-4xl"
+                        >
+                            {props.headline}
+                        </h2>
+                        <p @if={props.text} class="mt-3 max-w-2xl mx-auto text-xl text-slate-500 sm:mt-4">
+                            {props.text}
+                        </p>
+                    </div>
+                    {props.partialBackground ? props.content : null}
+                </div>
+                {props.partialBackground ? null : props.content}
+            </section>
+        `
+    }
+}

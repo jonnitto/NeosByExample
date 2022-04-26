@@ -1,0 +1,33 @@
+'Base.Theme:Content.Blockquote':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.Image:AlternativeText': true
+    'Carbon.Image:Image': true
+  label: "${Neos.Node.labelForNode(node).properties('cite', 'alternativeText', 'text', 'function')}"
+  ui:
+    label: Quote
+    icon: quote-left
+    position: 500
+  properties:
+    alternativeText:
+      ui:
+        inspector:
+          editorOptions:
+            placeholder: "ClientEval:node.properties.cite?'Image from ' + node.properties.cite.replaceAll('<br>', ' '):''"
+    text:
+      options:
+        preset: 'text.autoparagraph'
+    cite:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: Author
+    function:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: Role/Position

@@ -1,0 +1,3 @@
+prototype(Base.Theme:Document.Meta) < prototype(Base.Theme:Document.AbstractPage) {
+    content = Base.Theme:ContentCollection
+}

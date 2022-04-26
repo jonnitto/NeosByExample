@@ -1,0 +1,25 @@
+'Base.Theme:Document.Blog.Year':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+    'Base.Theme:Constraint.Document.NoSubDocument': true
+    'Base.Theme:Constraint.Document.Restricted': true
+    'Base.Theme:Mixin.NotInMenu': true
+    'Base.Theme:Mixin.SynUriPathSegmentWithTitle': true
+  ui:
+    label: Year
+    icon: calendar
+    group: ~
+    inspector:
+      groups:
+        document:
+          tab: hidden
+  constraints:
+    nodeTypes:
+      'Base.Theme:Document.Blog.Item': true
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    lead:
+      options:
+        preset: 'text.lead'

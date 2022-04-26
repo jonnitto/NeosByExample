@@ -1,0 +1,30 @@
+Carbon:
+  IncludeAssets:
+    Packages:
+      'aa_Theme':
+        Package: 'Base.Theme'
+        General:
+          Head:
+            - HeadTags.html
+            - https://cdn.polyfill.io/v2/polyfill.min.js[defer]
+            - Main.css
+            - Main.js[defer]
+        Live:
+          Head: HeadTagsLive.html
+          BodyStart: BodyTagsLive.html
+        Backend:
+          Head: Backend.js[defer]
+  Image:
+    inlineSVG: false
+    lazy:
+      enabled: true
+    alternativeText:
+      property: caption
+    dummy:
+      forgroundColor: fff
+      backgroundColor: 26224C
+    lightbox:
+      class: 'lightbox block'
+  Notification:
+    default:
+      width: '100%'

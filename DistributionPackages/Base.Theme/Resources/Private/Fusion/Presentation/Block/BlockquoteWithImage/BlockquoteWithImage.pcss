@@ -1,0 +1,31 @@
+.-blockquote-with-image {
+  grid-column: full !important;
+  display: grid;
+  grid-template:
+    ". image ." auto
+    ". image ." auto
+    " .text ." auto /
+    minmax(var(--content-padding), 1fr) minmax(0, 28rem) minmax(var(--content-padding), 1fr);
+
+  @screen sm {
+    grid-template-columns: minmax(var(--content-padding-wide), 1fr) minmax(0, 45rem) minmax(var(--content-padding-wide), 1fr);
+  }
+
+  @screen lg {
+    grid-template:
+      ". image . . ." 2rem
+      ". image . text ." auto
+      ". image . . ." 2rem /
+      minmax(var(--content-padding), 1fr) minmax(0, 23rem) 5rem minmax(0, 44rem) minmax(var(--content-padding), 1fr);
+
+    /* 23 + 5 + 44 = 72 == --content-max-width-wide */
+  }
+}
+
+.-blockquote-with-image__image {
+  grid-area: image;
+}
+
+.-blockquote-with-image__text {
+  grid-area: text;
+}

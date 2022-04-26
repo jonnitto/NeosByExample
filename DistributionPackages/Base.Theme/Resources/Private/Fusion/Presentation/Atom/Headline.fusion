@@ -1,0 +1,38 @@
+prototype(Base.Theme:Atom.Headline) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        content = ${PropTypes.string}
+        isFirstElement = ${PropTypes.boolean}
+        class = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
+    }
+
+    @styleguide {
+        props {
+            content = 'Headline'
+        }
+    }
+
+    isFirstElement = false
+
+    _tagName = ${this.isFirstElement ? 'h1' : 'h2'}
+
+    @if.hasHeadline = ${this.content}
+
+    renderer = Neos.Fusion:Tag {
+        tagName = ${props._tagName}
+        attributes.class = ${props.class}
+        content = Neos.Fusion:Case {
+            hasTags {
+                condition = ${String.indexOf(props.content, ' class="') != -1}
+                renderer = Carbon.Hyphen:Html {
+                    content = ${props.content}
+                }
+            }
+            default {
+                condition = true
+                renderer = Carbon.Hyphen:Text {
+                    content = ${props.content}
+                }
+            }
+        }
+    }
+}

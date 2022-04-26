@@ -1,0 +1,4 @@
+prototype(Base.Theme:Helper.Phone) < prototype(Neos.Fusion:Component) {
+    value = ${value}
+    renderer = ${props.value ? Carbon.String.phone(props.value, '0049') : null}
+}

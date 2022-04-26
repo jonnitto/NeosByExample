@@ -1,0 +1,48 @@
+prototype(Base.Theme:Template.AbstractPage) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            header = afx`<Sitegeist.Monocle:Preview.Prototype prototypeName='Base.Theme:Section.Header'/>`
+            footer = afx`<Sitegeist.Monocle:Preview.Prototype prototypeName='Base.Theme:Section.Footer' />`
+            content = afx`
+                <main class='-content -breakout -main'>
+                    <Sitegeist.Monocle:Preview.Prototypes
+                        items='Base.Theme:Block.HeadlineAndLead,Base.Theme:Section.TeaserContainer'
+                    />
+                    <Sitegeist.Monocle:Preview.Prototype
+                        prototypeName="Base.Theme:Atom.Image"
+                        props.breakout="full"
+                        props.figureAttributes.class="mt-20 aspect-h-1 aspect-w-3"
+                        props.width={3000}
+                        props.height={1000}
+                    />
+                    <Sitegeist.Monocle:Preview.Prototypes
+                        items='Base.Theme:Block.Text,Base.Theme:Module.Disturber,Base.Theme:Module.TextWithContent'
+                    />
+                </main>
+            `
+        }
+    }
+
+    notification = null
+    header = null
+    footer = null
+
+    asideClass = '-content mt-20'
+
+    asideAttributes = Neos.Fusion:DataStructure
+
+    hero = null
+    content = null
+    aside = null
+
+    renderer = afx`
+        {props.header}
+        {props.notification}
+        {props.hero}
+        {props.content}
+        <aside @if={props.aside} class={props.asideClass} {...props.asideAttributes}>
+            {props.aside}
+        </aside>
+        {props.footer}
+    `
+}

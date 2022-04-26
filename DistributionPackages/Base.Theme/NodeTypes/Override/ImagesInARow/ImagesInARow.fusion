@@ -1,0 +1,16 @@
+prototype(Jonnitto.ImagesInARow:Container) {
+    breakout = ${q(node).property('breakout')}
+
+    container = ${!!this.breakout}
+    inBackend = ${node.context.inBackend}
+    activateNodeUpdate = ${this.inBackend}
+    baseWidth = ${this.inBackend || this.breakout == 'full' ? 1920 : this.breakout == 'wide' ? 1151 : 896}
+
+    renderer.@process.breakout = Neos.Fusion:Augmenter {
+        x-data = ${props.activateNodeUpdate ? '{}' : null}
+        "x-on:neosnodeupdate.window" = ${props.activateNodeUpdate ? 'liveUpdate.breakout($root, $event.detail)' : null}
+        class = Base.Theme:Helper.BreakoutClass {
+            breakout = ${props.breakout}
+        }
+    }
+}

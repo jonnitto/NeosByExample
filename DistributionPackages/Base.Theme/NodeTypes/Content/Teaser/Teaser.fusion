@@ -1,0 +1,35 @@
+prototype(Base.Theme:Content.Teaser) < prototype(Neos.Neos:ContentComponent) {
+    nodes = ${q(node).property('nodes')}
+    single = ${!q(node).property('subsites')}
+
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = false
+    }
+
+    renderer = Base.Theme:Section.TeaserContainer {
+        @apply.props = ${props}
+
+        ajaxPath = Neos.Fusion:Map {
+            items = ${Array.unique(props.nodes)}
+            itemRenderer = Neos.Neos:NodeUri {
+                node = ${item}
+                additionalParams {
+                    ajax = true
+                    single = ${props.single ? 'true' : null}
+                }
+            }
+        }
+
+        content = Neos.Fusion:Loop {
+            items = ${Array.range(1, Math.max(3, Array.length(props.nodes)))}
+            itemRenderer = Base.Theme:Block.Teaser {
+                placeholder = true
+            }
+        }
+    }
+}

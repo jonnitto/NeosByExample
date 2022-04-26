@@ -1,0 +1,18 @@
+prototype(Base.Theme:Section.Header.Fixture.MenuItem) < prototype(Neos.Fusion:Component) {
+    label = null
+    subItems = null
+    href = ${'#' + Carbon.String.urlize(this.label)}
+
+    renderer = Neos.Fusion:DataStructure {
+        label = ${props.label}
+        href = ${props.href}
+        subItems = Neos.Fusion:Map {
+            @if.set = ${Type.isArray(props.subItems)}
+            items = ${props.subItems}
+            itemRenderer = Neos.Fusion:DataStructure {
+                href = ${props.href + '/' + Carbon.String.urlize(item)}
+                label = ${item}
+            }
+        }
+    }
+}

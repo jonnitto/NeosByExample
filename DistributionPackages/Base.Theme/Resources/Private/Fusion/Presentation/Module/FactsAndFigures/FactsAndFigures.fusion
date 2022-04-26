@@ -1,0 +1,101 @@
+prototype(Base.Theme:Module.FactsAndFigures) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        headline = ${PropTypes.string}
+        text = ${PropTypes.string}
+        backgroundColor = ${PropTypes.oneOf(['neos-dark', 'main-light', 'slate-50'])}
+        content = ${PropTypes.string}
+        inBackend = ${PropTypes.boolean}
+    }
+
+    @styleguide {
+        props {
+            style = 'margin:100vh 0'
+            headline = 'Das hier ist der nützlichste und klügste Blindtext'
+            text = 'der ganzen Welt, weil er dir genau sagt, wann 100 Zeichen vorbei sind (gleich nach der Zahl).'
+            content = afx`
+                <Sitegeist.Monocle:Preview.Prototype prototypeName='Base.Theme:Module.FactsAndFigures.Item'  props.headline='100%' props.text='Zufriedenheit' />
+                <Sitegeist.Monocle:Preview.Prototype prototypeName='Base.Theme:Module.FactsAndFigures.Item' props.headline='24/7' props.text='Verfügbarkeit' />
+                <Sitegeist.Monocle:Preview.Prototype prototypeName='Base.Theme:Module.FactsAndFigures.Item' props.headline='265' props.text='1000 Kunden'/>
+                <Sitegeist.Monocle:Preview.Prototype prototypeName='Base.Theme:Module.FactsAndFigures.Item' props.headline='5301' props.text='Projekte'/>
+            `
+        }
+    }
+
+    backgroundColor = 'slate-50'
+    inBackend = false
+    activateNodeUpdate = false
+
+    @if.hasContent = ${this.inBackend || this.content}
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+        _bg = Base.Theme:Helper.BackgroundColor {
+            backgroundColor = ${props.backgroundColor}
+        }
+
+        _fullContent = Base.Theme:Helper.BreakoutClass {
+            padding = false
+            breakout = 'full'
+            content = true
+        }
+
+        _factsClass = Base.Theme:Helper.BreakoutClass {
+            value = 'relative m-0'
+            padding = true
+            breakout = 'wide'
+        }
+
+        _headlineClass = Base.Theme:Helper.BreakoutClass {
+            value = 'mt-0'
+            padding = true
+            breakout = 'wide'
+        }
+
+        _backgroundClass = Base.Theme:Helper.BreakoutClass {
+            value = 'absolute inset-0 h-1/2 m-0'
+            padding = false
+            breakout = 'full'
+        }
+
+        _neosnodeupdate = ${props.activateNodeUpdate ? 'liveUpdate.backgroundColor($root, $event.detail)' : null}
+
+        renderer = afx`
+            <div 
+                class={["pt-12 sm:pt-16", props._bg.class, props._fullContent, props.class]}
+                style={props.style}
+                x-data={props.activateNodeUpdate}
+                "x-on:neosnodeupdate.window"={props._neosnodeupdate}
+            >
+                <div @if={props.headline || props.text} class={props._headlineClass}>
+                    <div class="text-center">
+                        <h2 @if={props.headline} class="text-3xl font-medium sm:text-4xl">
+                            {props.headline}
+                        </h2>
+                        <p @if={props.text} class="mt-3 text-xl opacity-70 sm:mt-4">
+                            {props.text}
+                        </p>
+                    </div>
+                </div>
+                <div class={["mt-10 pb-12 bg-white sm:pb-16", props._fullContent]}>
+                    <div class={["relative m-0", props._fullContent]}>
+                        <div
+                            class={[props._backgroundClass, props._bg.class]}
+                            x-data={props.activateNodeUpdate}
+                            "x-on:neosnodeupdate.window"={props._neosnodeupdate}
+                        ></div>
+                        <div class={props._factsClass}>
+                            <div class="max-w-4xl mx-auto">
+                                <dl
+                                    data-__neos-insertion-anchor={props.inBackend ? true : null}
+                                    class="bg-white shadow-lg sm:grid sm:grid-flow-col sm:auto-cols-fr"
+                                >
+                                    {props.content}
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    }
+}

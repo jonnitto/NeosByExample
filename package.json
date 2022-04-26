@@ -35,7 +35,6 @@
     "lazysizes": "^5.3.2",
     "postcss-cli": "^9.1.0",
     "prettier-plugin-tailwindcss": "^0.1.10",
-    "rough-notation": "^0.5.1",
     "tailwindcss-box-shadow": "^1.0.0",
     "tailwindcss-multi-column": "^1.0.2",
     "tippy.js": "^6.3.7"

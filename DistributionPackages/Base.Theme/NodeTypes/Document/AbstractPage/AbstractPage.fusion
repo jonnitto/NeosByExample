@@ -1,0 +1,25 @@
+prototype(Base.Theme:Document.AbstractPage) < prototype(Neos.Fusion:Component) {
+    hero = null
+    content = null
+    aside = null
+    notification = null
+
+    header = Neos.Fusion:Renderer {
+        renderPath = '/header'
+    }
+    footer  = Neos.Fusion:Renderer {
+        renderPath = '/footer'
+    }
+
+    renderer = Neos.Neos:Page {
+        body = Base.Theme:Template.AbstractPage {
+            header = ${props.header}
+            notification = ${props.notification}
+            hero = ${props.hero}
+            content = ${props.content}
+            aside = ${props.aside}
+            footer  = ${props.footer}
+        }
+        @process.convertUris = Neos.Neos:ConvertUris
+    }
+}

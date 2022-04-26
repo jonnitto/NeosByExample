@@ -1,0 +1,4 @@
+prototype(Sitegeist.Stampede:Icon) < prototype(Neos.Fusion:Component) {
+    style = null
+    viewBox = null
+}

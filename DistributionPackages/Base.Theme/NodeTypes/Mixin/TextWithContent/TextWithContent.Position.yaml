@@ -1,0 +1,12 @@
+'Base.Theme:Mixin.TextWithContent.Position':
+  abstract: true
+  properties:
+    textLeft:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Text on the left'
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 530

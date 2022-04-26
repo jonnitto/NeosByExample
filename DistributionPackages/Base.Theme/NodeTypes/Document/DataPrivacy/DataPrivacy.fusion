@@ -1,0 +1,3 @@
+prototype(Base.Theme:Document.DataPrivacy) < prototype(Base.Theme:Document.AbstractPage) {
+    content = Base.Theme:ContentCollection
+}

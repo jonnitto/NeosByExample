@@ -1,0 +1,4 @@
+prototype(Neos.Seo:FacebookMetaTags) {
+    facebookPages = ${q(site).property('socialFacebook')}
+    facebookPages.@process.split = ${value ? Array.last(String.split(value, 'facebook.com/')) : null}
+}

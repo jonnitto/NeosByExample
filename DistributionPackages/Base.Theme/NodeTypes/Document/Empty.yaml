@@ -1,0 +1,6 @@
+# Don't use this prototype. This is for have an empty link editor
+
+'Base.Theme:Document.Empty':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true

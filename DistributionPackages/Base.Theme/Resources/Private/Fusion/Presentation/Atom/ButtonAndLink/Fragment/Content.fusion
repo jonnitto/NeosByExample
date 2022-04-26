@@ -1,0 +1,28 @@
+prototype(Base.Theme:Atom.ButtonAndLink.Fragment.Content) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        appearance = ${PropTypes.oneOf(['main', 'minor', 'ghost', 'link'])}
+        content = ${PropTypes.string}
+        bigArea = ${PropTypes.boolean}
+        dark = ${PropTypes.boolean}
+    }
+
+    appearance = 'minor'
+    content = null
+
+    bigArea = false
+    dark = false
+
+    content.@process.fallback = ${value || Translation.translate('readMore', 'read more', [], 'Main', 'Base.Theme')}
+
+    renderer = afx`
+        <span @if={props.bigArea} class="absolute inset-0" aria-hidden="true"></span>
+        <span @if={props.appearance == 'ghost'} class="btn__ghost">
+            <span aria-hidden="true" class="btn__bg"></span>
+            <span class="btn__content">
+                {props.content}
+            </span>
+        </span>
+        {props.appearance != 'ghost' ? props.content : ''}
+    `
+}
+

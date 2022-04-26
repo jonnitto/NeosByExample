@@ -1,0 +1,25 @@
+- name: 'Node AJAX API'
+  uriPattern: '{node}.ajax'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action': 'show'
+    '@format': 'html'
+    'ajax': true
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+
+- name: 'Node JSON API'
+  uriPattern: '{node}.json'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action': 'show'
+    '@format': 'html'
+    'json': true
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'

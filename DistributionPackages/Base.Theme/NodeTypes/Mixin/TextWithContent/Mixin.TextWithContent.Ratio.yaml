@@ -1,0 +1,24 @@
+'Base.Theme:Mixin.TextWithContent.Ratio':
+  abstract: true
+  properties:
+    ratio:
+      type: string
+      ui:
+        label: Aspect ratio
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 520
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: true
+            placeholder: '50:50'
+            values:
+              25-75:
+                label: '25:75'
+              33-66:
+                label: '33:66'
+              66-33:
+                label: '66:33'
+              75-25:
+                label: '75:25'

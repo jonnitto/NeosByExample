@@ -1,0 +1,21 @@
+'Base.Theme:Mixin.Breakout':
+  abstract: true
+  properties:
+    breakout:
+      type: string
+      ui:
+        label: Width
+        inspector:
+          group: look
+          position: 1
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: true
+            placeholder: Contents width
+            values:
+              wide:
+                label: Wide
+                icon: arrows-alt-h
+              full:
+                label: Screen width
+                icon: desktop

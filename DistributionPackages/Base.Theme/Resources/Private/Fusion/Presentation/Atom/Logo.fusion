@@ -1,0 +1,8 @@
+prototype(Base.Theme:Atom.Logo) < prototype(Neos.Fusion:Component) {
+    href = null
+    renderer = afx`
+        <a href={props.href} class="py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neos-dark select-none">
+            <Base.Theme:Atom.Icon icon="neos" viewBox="0 0 453.5 124.7" class="h-10" />
+        </a>
+    `
+}

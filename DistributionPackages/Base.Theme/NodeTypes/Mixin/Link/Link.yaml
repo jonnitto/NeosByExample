@@ -1,0 +1,32 @@
+'Base.Theme:Mixin.Link':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        link:
+          label: Button
+          icon: link
+          position: 50
+  properties:
+    linkHref:
+      type: string
+      ui:
+        label: Link
+        reloadIfChanged: true
+        inspector:
+          group: link
+          position: 10
+          editor: Neos.Neos/Inspector/Editors/LinkEditor
+    linkText:
+      type: string
+      ui:
+        label: Label
+        reloadIfChanged: true
+        inspector:
+          group: link
+          hidden: 'ClientEval:node.properties.linkHref ? false : true'
+          position: 30
+          editorOptions:
+            placeholder: 'read more'
+      validation:
+        'Neos.Neos/Validation/LabelValidator': []

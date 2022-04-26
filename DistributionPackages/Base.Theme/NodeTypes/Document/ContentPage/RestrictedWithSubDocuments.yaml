@@ -1,0 +1,14 @@
+##
+# Standard document NodeType with restrictions, but with Subdocuments
+#
+##
+
+'Base.Theme:Document.ContentPage.RestrictedWithSubDocuments':
+  superTypes:
+    'Base.Theme:Document.ContentPage': true
+    'Base.Theme:Constraint.Document.Restricted': true
+  constraints:
+    nodeTypes:
+      'Base.Theme:Document.ContentPage': false
+      'Base.Theme:Document.ContentPage.RestrictedWithSubDocuments': true
+      'Base.Theme:Document.Meta': true

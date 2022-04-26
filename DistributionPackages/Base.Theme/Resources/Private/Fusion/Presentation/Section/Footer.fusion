@@ -1,0 +1,95 @@
+prototype(Base.Theme:Section.Footer) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        sections = ${PropTypes.arrayOf(PropTypes.dataStructure({'title': PropTypes.string, 'items': PropTypes.arrayOf(PropTypes.dataStructure({'href': PropTypes.string, 'label': PropTypes.string}))}))}
+        linkedin = ${PropTypes.string}
+        instagram = ${PropTypes.string}
+        facebook = ${PropTypes.string}
+        twitter = ${PropTypes.string}
+        youtube = ${PropTypes.string}
+        vimeo = ${PropTypes.string}
+        wikipedia = ${PropTypes.string}
+        email = ${PropTypes.string}
+        searchAction = ${PropTypes.string}
+    }
+    @styleguide {
+        props {
+            sections = Neos.Fusion:DataStructure {
+                01 {
+                    title = 'Über uns'
+                    items = Neos.Fusion:Map {
+                        items = ${['In Kürze', 'Team', 'Auszeichnungen']}
+                        itemRenderer = Neos.Fusion:DataStructure {
+                            label = ${item}
+                            href = ${'#' + Carbon.String.urlize(item)}
+                        }
+                    }
+                }
+                02 {
+                    title = 'Kontakt & Rechtliches'
+                    items = Neos.Fusion:Map {
+                        items = ${['In Kürze', 'Team', 'Auszeichnungen', 'Kontakt', 'Anfahrt', 'Impressum', 'Datenschutzhinweis']}
+                        itemRenderer = Neos.Fusion:DataStructure {
+                            label = ${item}
+                            href = ${'#' + Carbon.String.urlize(item)}
+                        }
+                    }
+                }
+            }
+
+            phone = '0012 345 6789 0'
+            instagram = 'instagram.com'
+            linkedin = 'linkedin.com'
+            facebook = 'facebook.com'
+            youtube = 'youtube.com'
+            twitter = 'twitter.com'
+            vimeo = 'vimeo.com'
+            wikipedia = 'wikipedia.com'
+            email = 'mail@example.test'
+            searchAction = 'search'
+        }
+    }
+
+    border = 'border-white border-t'
+
+    renderer = afx`
+        <footer class="mt-20 bg-slate-100 bg-opacity-80 px-safe pt-4 lg:pt-8" aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Fusszeile</h2>
+            <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-5 lg:gap-8">
+                <div class="md:grid md:grid-cols-2 md:gap-8 lg:col-span-3" x-data="{current:location.href}">
+                    <Neos.Fusion:Loop items={props.sections}>
+                        <div class={iterator.isFirst ? null : 'mt-12 md:mt-0'}>
+                            <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">
+                                <Carbon.Hyphen:Text inBackend={false} content={item.title} />
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <Neos.Fusion:Loop items={item.items}>
+                                    <li>
+                                        <a
+                                            href={item.href}
+                                            :class="current==$el.href?'text-slate-900':'text-slate-500'"
+                                            class="text-base hover:text-slate-900"
+                                        >
+                                            <Carbon.Hyphen:Text inBackend={false} content={item.label} />
+                                        </a>
+                                    </li>
+                                </Neos.Fusion:Loop>
+                            </ul>
+                        </div>
+                    </Neos.Fusion:Loop>
+                </div>
+            </div>
+            <div class={[props.border, "py-8"]}>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:flex md:items-center md:justify-between">
+                    <Base.Theme:Block.SocialNetworks
+                        {...props}
+                        wrapper="flex space-x-6 md:order-2"
+                        itemClass="block text-slate-400 hover:text-slate-500"
+                    />
+                    <p class="mt-8 font-light text-xs text-slate-400 md:mt-0 md:order-1">
+                        {Translation.translate('copyright', null, {year: Date.format(Date.now(), 'Y'), company: 'Neos Conference'}, 'Main', 'Base.Theme')}
+                    </p>
+                </div>
+            </div>
+        </footer>
+    `
+}

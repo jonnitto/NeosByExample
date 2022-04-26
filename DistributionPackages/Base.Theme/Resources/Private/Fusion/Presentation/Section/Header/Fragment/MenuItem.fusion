@@ -1,0 +1,93 @@
+prototype(Base.Theme:Section.Header.Fragment.MenuItem) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        href = ${PropTypes.string.isRequired}
+        label = ${PropTypes.string.isRequired}
+    }
+
+    href = null
+    label = null
+    subItems = null
+
+    @if.hasLabelAndHref = ${this.href && this.label}
+
+    defaultLinkClass = 'leading-tight text-base font-medium text-slate-900 opacity-60 hover:opacity-80 focus:opacity-80 transition-opacity focus:outline-none focus-visible:ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500'
+    mainItemClass = ${[this.defaultLinkClass, 'h-full group bg-white px-1 xl:px-4 flex flex-col items-center justify-center text-center']}
+
+    dropdownWrapperClass = 'bg-white z-10 hidden lg:block absolute inset-x-0 transform shadow-lg overflow-hidden py-4 border-t border-slate-100'
+    dropdownContentClass = 'w-full max-w-7xl mx-auto px-8 sm:px-10 lg:px-12'
+
+    renderer = Neos.Fusion:Case {
+        fetchDropdown {
+            condition = ${props.ajax}
+            renderer = afx`
+                <a
+                    x-bind={"dropdownButton('" + props.href + "')"}
+                    class={props.mainItemClass}
+                    href={props.href}
+                >
+                    {props.label}
+                </a>
+                <template x-teleport="header">
+                    <div class={props.dropdownWrapperClass} x-bind={"dropdownFetch('" + props.href + "')"}>
+                        <div class={[props.dropdownContentClass, "flex flex-col gap-5 lg:flex-wrap lg:justify-center lg:flex-row"]}>
+                            <Base.Theme:Block.Teaser placeholder={true} />
+                            <Base.Theme:Block.Teaser placeholder={true} />
+                            <Base.Theme:Block.Teaser placeholder={true} />
+                        </div>
+                        <div class={[props.props.dropdownContentClass, "text-center mt-8"]}>
+                            <a href={props.href} class="hover:underline text-neos-light">{props.moreText}</a>
+                        </div>
+                        <Base.Theme:Section.Header.Fragment.DropdownClose />
+                    </div>
+                </template>
+            `
+        }
+        dropdown {
+            condition = ${Carbon.Array.check(props.subItems)}
+            renderer = afx`
+                <a
+                    x-bind={"dropdownButton('" + props.href + "')"}
+                    class={props.mainItemClass}
+                    href={props.href}
+                >
+                    {props.label}
+                </a>
+                <template x-teleport="header">
+                    <div class={props.dropdownWrapperClass} x-bind={"dropdownElement('" + props.href + "')"}>
+                        <div class={props.dropdownContentClass}>
+                            <div class="grid gap-5 lg:grid-cols-3">
+                                <Neos.Fusion:Loop items={Array.unshift(props.subItems, props)}>
+                                    <a
+                                        href={item.href}
+                                        class={[props.defaultLinkClass, "grid grid-cols-3 overflow-hidden hover:bg-slate-100 focus:bg-slate-100"]}
+                                    >
+                                        <Base.Theme:Atom.Image
+                                            image={item.image}
+                                            width={127}
+                                            height={85}
+                                            objectFit="cover"
+                                            srcset="100w,127w,150w,200w,254w,300w"
+                                            figureAttributes.class="aspect-w-3 aspect-h-2"
+                                        />
+                                        <span class={[item.image ? "col-start-2 col-span-2" : "col-span-full" ,"block p-2"]}>
+                                            {item.label}
+                                        </span>
+                                    </a>
+                                </Neos.Fusion:Loop>
+                            </div>
+                        </div>
+                        <Base.Theme:Section.Header.Fragment.DropdownClose/>
+                    </div>
+                </template>
+            `
+        }
+        link {
+            condition = true
+            renderer = afx`
+                <a href={props.href} class={props.mainItemClass}>
+                    {props.label}
+                </a>
+            `
+        }
+    }
+}

@@ -33,7 +33,6 @@ specifiers:
   postcss-sort-media-queries: ^4.2.1
   prettier: ^2.6.2
   prettier-plugin-tailwindcss: ^0.1.10
-  rough-notation: ^0.5.1
   stylelint: ^14.7.1
   stylelint-config-standard: ^25.0.0
   tailwindcss: ^3.0.24
@@ -57,7 +56,6 @@ dependencies:
   lazysizes: 5.3.2
   postcss-cli: 9.1.0_postcss@8.4.12
   prettier-plugin-tailwindcss: 0.1.10_prettier@2.6.2
-  rough-notation: 0.5.1
   tailwindcss-box-shadow: 1.0.0
   tailwindcss-multi-column: 1.0.2
   tippy.js: 6.3.7
@@ -3382,10 +3380,6 @@ packages:
     dependencies:
       glob: 7.2.0
     dev: true
-
-  /rough-notation/0.5.1:
-    resolution: {integrity: sha512-ITHofTzm13cWFVfoGsh/4c/k2Mg8geKgBCwex71UZLnNuw403tCRjYPQ68jSAd37DMbZIePXPjDgY0XdZi9HPw==}
-    dev: false
 
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}

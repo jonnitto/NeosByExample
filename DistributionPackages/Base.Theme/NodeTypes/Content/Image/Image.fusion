@@ -1,0 +1,47 @@
+
+prototype(Base.Theme:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+    image = ${q(node).property('image')}
+    alternativeText = ${q(node).property('alternativeText')}
+    lightbox = ${q(node).property('lightbox')}
+    lightboxCaption = ${q(node).property('caption')}
+    link = ${q(node).property('link')}
+    breakout = ${q(node).property('breakout')}
+    breakout.@process.prose = ${value == 'prose' ? null : value}
+    prose = ${q(node).property('breakout') == 'prose'}
+
+    class = null
+
+    // For text / image combi
+    enableText = ${q(node).property('enableText')}
+    backgroundColor = ${q(node).property('backgroundColor')}
+    ratio = ${q(node).property('ratio')}
+    textLeft = ${q(node).property('textLeft')}
+    linkHref = ${q(node).property('linkHref')}
+    linkAppearance = ${q(node).property('linkAppearance')}
+    linkText = ${q(node).property('linkText') || Translation.translate('readMore', 'read more', [], null, 'Base.Theme')}
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    activateNodeUpdate = ${node.context.inBackend}
+
+    renderer = afx`
+        <Base.Theme:Atom.Image
+            @if={!props.enableText}
+            figureAttributes.class={["-image", props.prose ? "prose prose-lg mx-auto" : null]}
+            figureAttributes.x-data={props.activateNodeUpdate}
+            figureAttributes."x-on:neosnodeupdate.window"={props.activateNodeUpdate ? 'liveUpdate.breakout($root, $event.detail, true)' : null}
+            {...props}
+        />
+        <Base.Theme:Module.TextWithContent
+            @if={props.enableText}
+            {...props}
+        >
+            <Base.Theme:Atom.Image {...props} breakout={null}  />
+        </Base.Theme:Module.TextWithContent>
+    `
+}

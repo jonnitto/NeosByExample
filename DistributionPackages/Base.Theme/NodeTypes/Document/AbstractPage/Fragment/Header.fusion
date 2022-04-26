@@ -1,0 +1,26 @@
+header = Base.Theme:Section.Header {
+    homeUri = Neos.Neos:NodeUri {
+        node = ${site}
+    }
+
+    items = Base.Theme:Helper.MenuItems {
+        maximumLevels = 2
+    }
+
+    jumboDropdown = null
+
+    renderer.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            static = 'header'
+            site = ${site}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', site)}
+        }
+    }
+}

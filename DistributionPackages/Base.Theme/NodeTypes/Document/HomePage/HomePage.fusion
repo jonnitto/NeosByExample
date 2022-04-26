@@ -1,0 +1,4 @@
+prototype(Base.Theme:Document.HomePage) < prototype(Base.Theme:Document.AbstractPage) {
+    content = Base.Theme:ContentCollection
+}
+

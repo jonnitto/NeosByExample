@@ -1,0 +1,15 @@
+##
+# Standard document NodeType
+#
+##
+
+'Base.Theme:Document.ContentPage':
+  superTypes:
+    'Base.Theme:Mixin.AbstractPage': true
+  ui:
+    label: Content page
+    position: 10
+    icon: file
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'

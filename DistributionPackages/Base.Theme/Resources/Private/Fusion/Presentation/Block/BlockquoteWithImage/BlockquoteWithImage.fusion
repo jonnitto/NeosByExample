@@ -1,0 +1,49 @@
+prototype(Base.Theme:Block.BlockquoteWithImage) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        content = ${PropTypes.string}
+        cite = ${PropTypes.string}
+        function = ${PropTypes.string}
+    }
+
+    @styleguide {
+        props {
+            content = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>'
+            cite = 'James Black'
+            function = 'Zufriedener Kunde'
+            imageSource = Carbon.Image:Helper.ImageSource {
+                outputDummy = true
+            }
+            alternativeText = 'Alternativer Text'
+        }
+    }
+
+    _fallbackName = ${String.replace(this.cite, '<br>', ' ')}
+    alternativeText.@process.fallback = ${value || (this._fallbackName ? Translation.translate('imageFromPerson', '', [this._fallbackName], 'Main', 'Base.Theme') : null)}
+    @if.hasContent = ${this.content}
+
+    renderer = afx`
+        <div class="-blockquote-with-image mt-20">
+            <div class="-blockquote-with-image__bg w-full h-full bg-neos-dark col-start-1 col-span-3 row-start-2 row-span-2 lg:col-end-6 lg:row-start-2 lg:row-span-1" aria-hidden="true"></div>
+            <div class="-blockquote-with-image__image w-full">
+                <Base.Theme:Atom.Image
+                    figureAttributes.class="aspect-w-10 aspect-h-6 shadow-xl overflow-hidden sm:max-w-3xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full"
+                    class="object-cover w-full h-full lg:h-full lg:w-full"
+                    {...props}
+                    content={null}
+                />
+            </div>
+            <blockquote class="-blockquote-with-image__text text-2xl font-medium text-slate-100 my-12 self-center">
+                <svg class="mb-6 h-12 w-12 opacity-25" fill="currentColor"
+                        viewBox="0 0 32 32" aria-hidden="true">
+                    <path
+                        d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+                </svg>
+                {props.content}
+                <footer class="mt-6 text-base">
+                    <p>{props.cite}</p>
+                    <p class="opacity-60">{props.function}</p>
+                </footer>
+            </blockquote>
+        </div>
+    `
+}

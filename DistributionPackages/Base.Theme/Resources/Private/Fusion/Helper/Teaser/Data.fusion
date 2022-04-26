@@ -1,0 +1,18 @@
+prototype(Base.Theme:Helper.Teaser.Data) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+    dateProperty = '_hiddenBeforeDateTime'
+
+    renderer = Neos.Fusion:DataStructure {
+        headline = ${q(props.node).property('title')}
+        text = ${q(props.node).property('subtitle')}
+        href = Neos.Neos:NodeUri {
+            node = ${props.node}
+        }
+        imageNode = Base.Theme:Helper.FirstImageNode {
+            node = ${props.node}
+        }
+        date = ${props.dateProperty ? q(props.node).property(props.dateProperty) : null}
+        image = ${this.imageNode ? q(this.imageNode).property('image') : null}
+        alternativeText = ${this.imageNode ? q(this.imageNode).property('alternativeText') : null}
+    }
+}

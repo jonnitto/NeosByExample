@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Base.Theme" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="headline" xml:space="preserve">
+                <source>Überschrift hier eingeben</source>
+            </trans-unit>
+            <trans-unit id="subheadline" xml:space="preserve">
+                <source>Untertitel hier eingeben</source>
+            </trans-unit>
+            <trans-unit id="pure" xml:space="preserve">
+                <source>Text hier eingeben</source>
+            </trans-unit>
+            <trans-unit id="label" xml:space="preserve">
+                <source>Label hier eingeben</source>
+            </trans-unit>
+            <trans-unit id="lead" xml:space="preserve">
+                <source>Einleitungstext hier eingeben</source>
+            </trans-unit>
+            <trans-unit id="link" xml:space="preserve">
+                <source>Text hier eingeben</source>
+            </trans-unit>
+            <trans-unit id="list" xml:space="preserve">
+                <source>Aufzählungspunkt</source>
+            </trans-unit>
+            <trans-unit id="text" xml:space="preserve">
+                <source>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
