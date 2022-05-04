@@ -22,8 +22,18 @@ module.exports = {
         require("@tailwindcss/line-clamp"),
         plugin(function ({ addVariant }) {
             addVariant("hocus", ["&:hover", "&:focus"]);
+            addVariant("hocus-within", ["&:hover", "&:focus-within"]);
             addVariant("group-hocus", [".group:hover &", ".group:focus &"]);
-            addVariant("supports-backdrop-blur", "@supports (backdrop-filter: blur(5px))");
+            addVariant("group-hocus-within", [".group:hover &", ".group:focus-within &"]);
+            addVariant(
+                "supports-backdrop-blur",
+                "@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))"
+            );
+            addVariant("supports-scrollbars", "@supports selector(::-webkit-scrollbar)");
+            addVariant("children", "& > *");
+            addVariant("scrollbar", "&::-webkit-scrollbar");
+            addVariant("scrollbar-track", "&::-webkit-scrollbar-track");
+            addVariant("scrollbar-thumb", "&::-webkit-scrollbar-thumb");
         }),
     ],
 };
