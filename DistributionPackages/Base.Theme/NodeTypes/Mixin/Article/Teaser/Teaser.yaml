@@ -28,7 +28,7 @@
             dataSourceAdditionalData:
               labelPropertyName: title
       validation:
-        'Neos.Neos/Validation/NotEmptyValidator': []
+        'Neos.Neos/Validation/NotEmptyValidator': {}
     moreText:
       type: string
       ui:

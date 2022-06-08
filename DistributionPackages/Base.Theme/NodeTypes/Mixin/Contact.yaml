@@ -38,7 +38,7 @@
         inspector:
           group: contact
       validation:
-        # 'Neos.Neos/Validation/EmailAddressValidator': []
+        # 'Neos.Neos/Validation/EmailAddressValidator': {}
         'Neos.Neos/Validation/RegularExpressionValidator':
           regularExpression: '/^[^A-Z]+$/'
     socialLinkedin:

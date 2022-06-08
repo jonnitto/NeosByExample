@@ -29,4 +29,4 @@
           editorOptions:
             placeholder: 'read more'
       validation:
-        'Neos.Neos/Validation/LabelValidator': []
+        'Neos.Neos/Validation/LabelValidator': {}

@@ -25,4 +25,4 @@
           editorOptions:
             minuteStep: 15
       validation:
-        'Neos.Neos/Validation/NotEmptyValidator': []
+        'Neos.Neos/Validation/NotEmptyValidator': {}
