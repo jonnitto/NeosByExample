@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const content = require("./Build/Carbon.Pipeline/purge");
 const plugin = require("tailwindcss/plugin");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content,
     theme: {
