@@ -16,7 +16,7 @@
         "carbon/notification": "^2.1",
         "flowpack/nodetemplates": "^1.2",
         "jonnitto/imagesinarow": "^4.0.0",
-        "jonnitto/outdatedbrowser": "^4.1",
+        "jonnitto/outdatedbrowser": "^5.0",
         "jonnitto/photoswipe": "^3.2",
         "jonnitto/prettyembedvideoplatforms": "^2.0",
         "mhsdesign/liveinspectorjsevents": "^2.0",
