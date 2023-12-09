@@ -76,7 +76,6 @@
        <properties>
         <lightbox __type="boolean">1</lightbox>
         <linkAppearance __type="string">main</linkAppearance>
-        <textLeft __type="boolean"></textLeft>
         <image __type="object" __identifier="ad73ece2-20e0-4c80-90b5-3d147c00ad85" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;ad73ece2-20e0-4c80-90b5-3d147c00ad85&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_8_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;828bce61ee62289d9d1b81a22836aa1b00d69600&quot;,&quot;hash&quot;:&quot;828bce61ee62289d9d1b81a22836aa1b00d69600&quot;,&quot;__identity&quot;:&quot;c367b82d-de37-4090-b28e-a7fcdcb6b802&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
         <enableText __type="boolean">1</enableText>
         <backgroundColor __type="string">neos-dark</backgroundColor>
@@ -160,7 +159,6 @@
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:36:37+02:00</lastPublicationDateTime>
        <properties>
-        <lightbox __type="boolean"></lightbox>
         <linkAppearance __type="string">main</linkAppearance>
         <textLeft __type="boolean">1</textLeft>
         <enableText __type="boolean">1</enableText>
@@ -287,19 +285,17 @@
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T10:40:27+02:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T10:40:27+02:00</lastPublicationDateTime>
        <properties>
-        <lightbox __type="boolean"></lightbox>
         <preserveAspectRatio __type="boolean">1</preserveAspectRatio>
         <force16to9 __type="boolean">1</force16to9>
         <type __type="string">video</type>
         <linkAppearance __type="string">main</linkAppearance>
-        <textLeft __type="boolean"></textLeft>
         <videoID __type="string">https://www.youtube.com/watch?v=4DVD03IlXIs&amp;t=7s</videoID>
         <platform __type="string">youtube</platform>
         <metadataID __type="string">4DVD03IlXIs</metadataID>
         <metadataTitle __type="string">Why editors love Neos CMS | Open Source CMS</metadataTitle>
         <metadataRatio __type="string">56.5%</metadataRatio>
         <metadataImage __type="string">//i.ytimg.com/vi/4DVD03IlXIs/maxresdefault.jpg</metadataImage>
-        <metadataThumbnail __type="object" __identifier="b4f59c81-9917-49ac-b4c8-cfe42ec4b25d" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;b4f59c81-9917-49ac-b4c8-cfe42ec4b25d&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Youtube-4DVD03IlXIs-maxresdefault.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpg&quot;,&quot;sha1&quot;:&quot;ffc5cb8fc62f397652ef3a0c40f79071b87e0ef0&quot;,&quot;hash&quot;:&quot;ffc5cb8fc62f397652ef3a0c40f79071b87e0ef0&quot;,&quot;__identity&quot;:&quot;289b4d29-0ecd-4ef2-b693-4515944627d4&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
+        <metadataThumbnail __type="object" __identifier="b4f59c81-9917-49ac-b4c8-cfe42ec4b25d" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;b4f59c81-9917-49ac-b4c8-cfe42ec4b25d&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Youtube-4DVD03IlXIs-maxresdefault.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;ffc5cb8fc62f397652ef3a0c40f79071b87e0ef0&quot;,&quot;hash&quot;:&quot;ffc5cb8fc62f397652ef3a0c40f79071b87e0ef0&quot;,&quot;__identity&quot;:&quot;289b4d29-0ecd-4ef2-b693-4515944627d4&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
         <breakout __type="string">wide</breakout>
        </properties>
       </variant>
@@ -374,9 +370,7 @@
           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:30:46+02:00</lastModificationDateTime>
           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:30:46+02:00</lastPublicationDateTime>
           <properties>
-           <lightbox __type="boolean"></lightbox>
            <linkAppearance __type="string">main</linkAppearance>
-           <textLeft __type="boolean"></textLeft>
            <image __type="object" __identifier="489fc373-e8f9-4c0b-bd89-3b5646f4aa75" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;489fc373-e8f9-4c0b-bd89-3b5646f4aa75&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;pexels-dillon-kydd-5794559.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;hash&quot;:&quot;3e1ddc750a29ce79f25784df015e82af4abc06ae&quot;,&quot;__identity&quot;:&quot;cacfee7a-2ef1-4f04-bd4b-2643ebb0581e&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
           </properties>
          </variant>
@@ -420,7 +414,6 @@
          <force16to9 __type="boolean">1</force16to9>
          <type __type="string">video</type>
          <linkAppearance __type="string">minor</linkAppearance>
-         <textLeft __type="boolean"></textLeft>
          <videoID __type="string">https://vimeo.com/292721382</videoID>
          <platform __type="string">vimeo</platform>
          <metadataID __type="string">292721382</metadataID>
@@ -428,7 +421,7 @@
          <metadataRatio __type="string">56.25%</metadataRatio>
          <metadataDuration __type="integer">578</metadataDuration>
          <metadataImage __type="string">//i.vimeocdn.com/video/729183424-e5e3ec096b2d2137efb8431dad9ea48baeb94f4bdc8a06a23fee154a3b39fb86-d_1280</metadataImage>
-         <metadataThumbnail __type="object" __identifier="a23f1c1c-18ea-4f8a-aab3-52c777be2438" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;a23f1c1c-18ea-4f8a-aab3-52c777be2438&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Vimeo-292721382.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpg&quot;,&quot;sha1&quot;:&quot;8d966295cfd6a6c786c1d6431ca98b517de16437&quot;,&quot;hash&quot;:&quot;8d966295cfd6a6c786c1d6431ca98b517de16437&quot;,&quot;__identity&quot;:&quot;8adc9fba-c1ac-43ba-b493-eac0637899e7&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
+         <metadataThumbnail __type="object" __identifier="a23f1c1c-18ea-4f8a-aab3-52c777be2438" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;a23f1c1c-18ea-4f8a-aab3-52c777be2438&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Vimeo-292721382.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;8d966295cfd6a6c786c1d6431ca98b517de16437&quot;,&quot;hash&quot;:&quot;8d966295cfd6a6c786c1d6431ca98b517de16437&quot;,&quot;__identity&quot;:&quot;8adc9fba-c1ac-43ba-b493-eac0637899e7&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
          <enableText __type="boolean">1</enableText>
          <text __type="string">&lt;p&gt;Let's take this conversation offline get six alpha pups in here for a focus group paddle on both sides paddle on both sides hire the best work flows . If you're not hurting you're not winning this is meaningless, identify pain points so best practices spinning our wheels so what the so best practices.&lt;/p&gt;</text>
          <headline __type="string">Video with text</headline>
@@ -485,7 +478,6 @@
         <properties>
          <lightbox __type="boolean">1</lightbox>
          <linkAppearance __type="string">main</linkAppearance>
-         <textLeft __type="boolean"></textLeft>
          <image __type="object" __identifier="90688a82-264e-4439-8eac-8b0b3fa185b3" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;90688a82-264e-4439-8eac-8b0b3fa185b3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;hash&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;__identity&quot;:&quot;58c96e51-3121-4ffa-ab86-af95d91fe620&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
         </properties>
        </variant>
@@ -576,11 +568,11 @@
        </node>
       </node>
       <node identifier="3ca10389-4c44-4bb1-a4f2-628d82c9f98e" nodeName="node-kbue7iiu17gh2">
-       <variant sortingIndex="250" workspace="live" nodeType="Base.Theme:Content.Image" version="8" removed="" hidden="" hiddenInIndex="">
+       <variant sortingIndex="250" workspace="live" nodeType="Base.Theme:Content.Image" version="9" removed="" hidden="" hiddenInIndex="">
         <dimensions/>
         <accessRoles __type="array"/>
         <creationDateTime __type="object" __classname="DateTime">2022-04-25T21:41:17+02:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:45:50+02:00</lastModificationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2023-12-09T13:44:17+01:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:45:50+02:00</lastPublicationDateTime>
         <properties>
          <linkAppearance __type="string">minor</linkAppearance>
@@ -590,6 +582,8 @@
          <linkText __type="string">Contact</linkText>
          <enableText __type="boolean">1</enableText>
          <image __type="object" __identifier="5f01f0c6-05dd-43df-a4b3-eb635cfe3560" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5f01f0c6-05dd-43df-a4b3-eb635cfe3560&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_3.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;hash&quot;:&quot;21fe3017010df9caec36863e9878f31d894597bd&quot;,&quot;__identity&quot;:&quot;184a198c-fb9f-4555-ba02-5028b14ed0b9&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         <lightbox __type="boolean"></lightbox>
+         <textLeft __type="boolean"></textLeft>
         </properties>
        </variant>
       </node>
@@ -690,19 +684,17 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T21:56:20+02:00</lastPublicationDateTime>
         <properties>
-         <lightbox __type="boolean"></lightbox>
          <preserveAspectRatio __type="boolean">1</preserveAspectRatio>
          <force16to9 __type="boolean">1</force16to9>
          <type __type="string">video</type>
          <linkAppearance __type="string">main</linkAppearance>
-         <textLeft __type="boolean"></textLeft>
          <videoID __type="string">https://www.youtube.com/watch?v=pfdIGmga7aA</videoID>
          <platform __type="string">youtube</platform>
          <metadataID __type="string">pfdIGmga7aA</metadataID>
          <metadataTitle __type="string">Onewheel GT Drop Zone</metadataTitle>
          <metadataRatio __type="string">56.5%</metadataRatio>
          <metadataImage __type="string">//i.ytimg.com/vi/pfdIGmga7aA/maxresdefault.jpg</metadataImage>
-         <metadataThumbnail __type="object" __identifier="5fdd81a9-507a-4771-95d4-49e75b424a56" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5fdd81a9-507a-4771-95d4-49e75b424a56&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Youtube-pfdIGmga7aA-maxresdefault.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpg&quot;,&quot;sha1&quot;:&quot;9d8871cba1551671e7af8850b25e57ceff1ec853&quot;,&quot;hash&quot;:&quot;9d8871cba1551671e7af8850b25e57ceff1ec853&quot;,&quot;__identity&quot;:&quot;f2263988-a337-43ac-8c74-6e5c79acacc3&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
+         <metadataThumbnail __type="object" __identifier="5fdd81a9-507a-4771-95d4-49e75b424a56" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5fdd81a9-507a-4771-95d4-49e75b424a56&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Youtube-pfdIGmga7aA-maxresdefault.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;9d8871cba1551671e7af8850b25e57ceff1ec853&quot;,&quot;hash&quot;:&quot;9d8871cba1551671e7af8850b25e57ceff1ec853&quot;,&quot;__identity&quot;:&quot;f2263988-a337-43ac-8c74-6e5c79acacc3&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;9da8c07d-3b44-4d2a-b792-5f1d959be5b1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;PrettyEmbed&quot;}],&quot;assetCollections&quot;:[]}</metadataThumbnail>
          <breakout __type="string">wide</breakout>
         </properties>
        </variant>
@@ -821,9 +813,7 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T16:02:52+02:00</lastPublicationDateTime>
          <properties>
-          <lightbox __type="boolean"></lightbox>
           <linkAppearance __type="string">main</linkAppearance>
-          <textLeft __type="boolean"></textLeft>
           <image __type="object" __identifier="90688a82-264e-4439-8eac-8b0b3fa185b3" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;90688a82-264e-4439-8eac-8b0b3fa185b3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;Neos_Wallpaper_7_0.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;hash&quot;:&quot;abd356f39d7a9833e36195ed6fd60442f19196eb&quot;,&quot;__identity&quot;:&quot;58c96e51-3121-4ffa-ab86-af95d91fe620&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
          </properties>
         </variant>

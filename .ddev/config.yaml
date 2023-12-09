@@ -1,21 +1,25 @@
 name: neos-by-example
 type: php
 docroot: Web
-php_version: '8.0'
+php_version: '8.1'
 webserver_type: nginx-fpm
 router_http_port: '80'
 router_https_port: '443'
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-mariadb_version: '10.6'
-mysql_version: ''
-nfs_mount_enabled: false
+database:
+  type: mariadb
+  version: '10.8'
 use_dns_when_possible: true
-mutagen_enabled: true
-composer_version: '2'
-omit_containers: [dba]
 timezone: Europe/Berlin
+composer_version: '2'
+nodejs_version: '20'
+webimage_extra_packages: ['php8.1-vips']
+upload_dirs:
+  - '../Data/Persistent'
+  - '../Data/Temporary'
+  - '/_Resources'
 hooks:
   post-start:
     - exec: mkdir -pv Data/Logs >> /dev/null
@@ -31,3 +35,5 @@ web_environment:
   - NEOS_DB_USER=db
   - NEOS_DB_PASSWORD=db
   - NEOS_DB_DRIVER=pdo_mysql
+  - MAILER_DSN=smtp://localhost:1025
+  - NEOS_REDIS_ENDPOINT=redis

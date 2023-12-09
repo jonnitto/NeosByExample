@@ -20,7 +20,6 @@ module.exports = {
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
         require("@tailwindcss/aspect-ratio"),
-        require("@tailwindcss/line-clamp"),
         plugin(function ({ addVariant }) {
             addVariant("hocus", ["&:hover", "&:focus"]);
             addVariant("hocus-within", ["&:hover", "&:focus-within"]);
