@@ -18,4 +18,6 @@ lazySizes.cfg.nativeLoading = {
     },
 };
 
+window.Alpine = Alpine;
+
 Alpine.start();
